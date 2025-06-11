@@ -5,6 +5,7 @@ const context = canvas.getContext("2d");
 const captureButton = document.getElementById("capture");
 const countdownDisplay = document.getElementById("countdown");
 const cameraContainer = document.querySelector(".camera-container");
+const flashOverlay = document.getElementById("flash");
 const controls = document.getElementById("controls");
 const controlsNext = document.getElementById("controls-next");
 
@@ -188,9 +189,9 @@ captureButton.addEventListener("click", function () {
       clearInterval(countdownInterval);
       countdownDisplay.style.display = "none";
 
-      // flashOverlay.classList.add("flash");
+      flashOverlay.classList.add("flash");
       setTimeout(() => {
-        // flashOverlay.classList.remove("flash");
+        flashOverlay.classList.remove("flash");
         const videoWidth = video.videoWidth;
         const videoHeight = video.videoHeight;
         const canvasAspect = canvas.width / canvas.height;
