@@ -1,0 +1,489 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: display 0.3s ease-in-out;
+}
+
+.home-content {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content div {
+  width: 80%;
+}
+
+.header-content div img {
+  width: 100%;
+}
+
+.header-content div:last-child img {
+  width: 90%;
+  margin-top: 0.75rem;
+}
+
+.home-text {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.gender-wrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.gender-wrapper-male,
+.gender-wrapper-male {
+  display: none;
+}
+
+.gender-wrapper div {
+  width: 40%;
+  cursor: pointer;
+  filter: grayscale(1);
+}
+
+.gender-wrapper div.selected {
+  filter: grayscale(0);
+}
+
+.gender-wrapper div:hover {
+  opacity: 0.75;
+}
+
+.gender-wrapper div img {
+  width: 100%;
+}
+
+.startButton {
+  width: 80%;
+  cursor: pointer;
+}
+
+.startButton:hover {
+  opacity: 0.75F;
+}
+
+.startButton img {
+  width: 100%;
+}
+
+.footer {
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+}
+
+.footer div img {
+  width: 100%;
+}
+
+.footer .logo-left {
+  width: 30%;
+  z-index: 2;
+}
+
+.footer .logo-right {
+  width: 20%;
+}
+
+.footer .footer-content {
+  position: absolute;
+  width: 75%;
+  left: 50%;
+  bottom: -5%;
+  transform: translate(-50%, 0);
+}
+
+/* Step Two */
+.step-two {
+  width: 100%;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: display 0.3s ease-in-out;
+}
+
+.gender-header {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.gender-header div {
+  width: 70%;
+  margin-bottom: 0.5rem;
+}
+
+.gender-header div img {
+  width: 100%;
+}
+
+.gender-container {
+  width: 100%;
+  max-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+  gap: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.gender-container .example-item {
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 0.1rem;
+  overflow: hidden;
+}
+
+.gender-container .example-item p {
+  font-size: 0.75rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: #757575;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.gender-container .example-item:last-child {
+  margin-left: 0;
+}
+
+.gender-container .example-item .example-wrapper {
+  margin-bottom: 1rem;
+  background-color: #757575;
+  transition: background-color 0.2s linear;
+  box-sizing: border-box;
+  padding: 0.25rem;
+  border-radius: 3px;
+}
+
+.gender-container .example-item .example-image {
+  clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0% 50%, 0 15%);
+  overflow: hidden;
+  position: relative;
+}
+
+.gender-container .example-item .example-image img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  transform: scale(1.6);
+  transform-origin: top center;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.gender-container .example-item.active p {
+  color: white;
+  white-space: nowrap;
+}
+
+.gender-container .example-item.active .example-image img {
+  filter: grayscale(0);
+}
+
+.gender-container .example-item.active .example-wrapper {
+  background-color: white;
+}
+
+.nextStepTwo {
+  width: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
+  margin-top: 1rem;
+}
+
+.nextStepTwo:hover {
+  opacity: 0.75;
+}
+
+.nextStepTwo img {
+  width: 100%;
+}
+
+.step-three {
+  width: 100%;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: display 0.3s ease-in-out;
+}
+
+.wait-camera {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.wait-camera img {
+  width: 15%;
+  margin-bottom: 0.5rem;
+}
+
+.camera-container {
+  width: 90%;
+  height: 64vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  display: inline-block;
+}
+#frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99;
+  display: block;
+}
+#countdown {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.25);
+  display: none;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  scale: 0;
+}
+
+@keyframes flashAnimation {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+.flash {
+  animation: flashAnimation 0.5s ease-out;
+}
+
+#controls {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#controls button {
+  width: 45%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#controls button:disabled {
+  filter: grayscale(1);
+}
+
+#controls button img {
+  width: 100%;
+}
+
+#controls-next {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#controls-next button {
+  width: 45%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#controls-next button:disabled {
+  filter: grayscale(1);
+}
+
+#controls-next button img {
+  width: 100%;
+}
+
+#controls-next button:disabled {
+  filter: grayscale(1);
+}
+
+.capture-image {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capture-image canvas {
+  width: 85%;
+  border: 5px white solid;
+}
+
+canvas {
+  display: none;
+  margin: 10px auto;
+  transform: scaleX(-1);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  object-fit: cover;
+  transform: scaleX(-1);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.step-final {
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: display 0.3s ease-in-out;
+  position: relative;
+}
+
+.image-final {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-final img {
+  width: 100%;
+  border: 5px white solid;
+}
+
+.step-final .final-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-final .final-button button {
+  width: 40%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.step-final .final-button button:hover {
+  opacity: 0.75;
+}
+
+.step-final .final-button button img {
+  width: 100%;
+}
+
+.drawer-container {
+  height: 15vh;
+  width: 90%;
+  position: fixed;
+  bottom: -100%;
+  background-color: white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 2;
+  transition: bottom 0.3s ease;
+}
+
+.drawer-container.active {
+  bottom: 0;
+}
+
+.drawer-container div {
+  width: 20%;
+  cursor: pointer;
+}
+
+.drawer-container div:hover {
+  opacity: 0.75;
+}
+
+.drawer-container div img {
+  width: 100%;
+}

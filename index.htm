@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/all.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="home" class="home">
+        <div class="home-content">
+          <div class="header-content">
+            <div><img src="./assets/img/homeContent.png" alt="" /></div>
+            <div><img src="./assets/img/homeContent2.png" alt="" /></div>
+          </div>
+          <p class="home-text">Chỉ cần một tấm ảnh, còn lại Mirinda lo hết! </p>
+          <div class="gender-wrapper">
+            <div class="gender-male selected" id="gender-male">
+              <img src="./assets/img/male.png" alt="" />
+            </div>
+            <div class="gender-female" id="gender-female">
+              <img src="./assets/img/female.png" alt="" />
+            </div>
+          </div>
+          <div class="startButton" id="startButton">
+            <img src="./assets/img/start.png" alt="" />
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="logo-left " data-src="./assets/img/logo-superman.png">
+            <img
+              class="lazy blur"
+              src="./assets/img/logo-superman.png"
+              alt=""
+              data-src="./assets/img/logo-superman.png"
+            />
+          </div>
+          <div class="footer-content" data-src="./assets/img/homeFooter.png">
+            <img
+              class="lazy blur"
+              src="./assets/img/homeFooter.png"
+              alt=""
+              data-src="./assets/img/homeFooter.png"
+            />
+          </div>
+          <div class="logo-right" data-src="./assets/img/logomirinda.png">
+            <img
+              class="lazy blur"
+              src="./assets/img/logomirinda.png"
+              alt=""
+              data-src="./assets/img/logomirinda.png"
+            />
+          </div>
+        </footer>
+      </div>
+      <div class="step-two" id="step-two">
+        <div class="navbar">
+          <div id="back2Btn">
+            <img src="./assets/img/backBtn.png" alt="" />
+          </div>
+          <div class="homeBtn" onclick="returnHome()">
+            <img src="./assets/img/homeBtn.png" alt="" />
+          </div>
+        </div>
+        <div class="gender-header">
+          <div>
+            <img src="./assets/img/genderMale.png" alt="" />
+          </div>
+          <p>Chọn 1 trong 5 mẫu sau</p>
+        </div>
+        <div class="gender-wrapper-male" id="gender-wrapper-male">
+          <div class="gender-container">
+            <div class="example-item active" id="male01">
+              <p>Mẫu 01</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/male01.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="male02">
+              <p>Mẫu 02</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/male02.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="male03">
+              <p>Mẫu 3</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/male03.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gender-container">
+            <div class="example-item" id="male04">
+              <p>Mẫu 04</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/male04.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="male05">
+              <p>Mẫu 05</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/male05.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gender-wrapper-female" id="gender-wrapper-female">
+          <div class="gender-container">
+            <div class="example-item active" id="female01">
+              <p>Mẫu 01</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/female01.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="female02">
+              <p>Mẫu 02</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/female02.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="female03">
+              <p>Mẫu 3</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/female03.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gender-container">
+            <div class="example-item" id="female04">
+              <p>Mẫu 04</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/female04.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="female05">
+              <p>Mẫu 05</p>
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img
+                    src="./assets/img/female05.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nextStepTwo" id="nextStepTwo">
+          <img src="./assets/img/continue.png" alt="" />
+        </div>
+        <div class="footer-logo">
+          <div>
+            <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
+          <div>
+            <img src="./assets/img/logomirinda.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="step-three" id="step-three">
+        <div class="navbar">
+          <div id="back3Btn">
+            <img src="./assets/img/backBtn.png" alt="" />
+          </div>
+          <div id="captureAgain" style="display: none;">
+            <img src="./assets/img/backBtn.png" alt="" />
+          </div>
+          <div class="homeBtn" onclick="returnHome()">
+            <img src="./assets/img/homeBtn.png" alt="" />
+          </div>
+        </div>
+        <div class="camera-container">
+          <div class="wait-camera">
+            <img src="./assets/img/captureLogo.png" alt="" />
+            <p>Camera đang khởi chạy</p>
+          </div>
+          <video id="video" autoplay playsinline muted></video>
+          <div id="countdown"></div>
+          <div id="flash"></div>
+          <canvas id="frame-overlay"></canvas>
+        </div>
+        <div class="capture-image">
+          <canvas id="canvas" width="842" height="1216"></canvas>
+        </div>
+        <div id="controls">
+          <button id="capture" disabled>
+            <img src="./assets/img/capture.png" alt="" />
+          </button>
+        </div>
+        <div id="controls-next">
+          <button id="createAi">
+            <img src="./assets/img/continue.png" alt="" />
+          </button>
+        </div>
+        <div class="footer-logo">
+          <div>
+            <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
+          <div>
+            <img src="./assets/img/logomirinda.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="step-final" id="step-final">
+        <div class="navbar">
+          <div></div>
+          <div class="homeBtn" onclick="returnHome()">
+            <img src="./assets/img/homeBtn.png" alt="" />
+          </div>
+        </div>
+        <div class="image-final" id="image-final">
+          <img
+            src="./assets/img/male01.jpg"
+            alt=""
+            id="imageAi"
+          />
+        </div>
+        <div class="final-button">
+          <button id="shareBtn">
+            <img src="./assets/img/share.png" alt="" />
+          </button>
+          <button id="downloadBtn">
+            <img src="./assets/img/download.png" alt="" />
+          </button>
+        </div>
+        <div class="drawer-container" id="drawerShare">
+          <div id="copyBtn"><img src="./assets/img/copy.png" alt="" /></div>
+          <div id="shareFbBtn">
+            <img src="./assets/img/Facebook.png" alt="" />
+          </div>
+          <div id="shareZlBtn">
+            <img src="./assets/img/zalo.png" alt="" />
+          </div>
+        </div>
+        <div class="footer-logo">
+          <div>
+            <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
+          <div>
+            <img src="./assets/img/logomirinda.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay-loading">
+        <div class="loader"></div>
+        <p id="loading-text">AI Booth đang tạo</p>
+        <p>Xin chờ trong giây lát...</p>
+      </div>
+      <div class="screen-pc">
+        <footer class="footer">
+          <div class="logo-left " data-src="./assets/img/logo-superman.png">
+            <img
+              class="lazy blur"
+              src="./assets/img/logo-superman.png"
+              alt=""
+              data-src="./assets/img/logo-superman.png"
+            />
+          </div>
+          <div class="footer-content" data-src="./assets/img/homeFooter.png">
+            <img
+              class="lazy blur"
+              src="./assets/img/homeFooter.png"
+              alt=""
+              data-src="./assets/img/homeFooter.png"
+            />
+          </div>
+          <div class="logo-right" data-src="./assets/img/logomirinda.png">
+            <img
+              class="lazy blur"
+              src="./assets/img/logomirinda.png"
+              alt=""
+              data-src="./assets/img/logomirinda.png"
+            />
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>
