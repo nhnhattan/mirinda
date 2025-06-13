@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Superman Mirinda</title>
 
     <link
       rel="stylesheet"
@@ -12,6 +12,16 @@
 
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
   </head>
@@ -21,187 +31,136 @@
         <div class="home-content">
           <div class="header-content">
             <div><img src="./assets/img/homeContent.png" alt="" /></div>
-            <div><img src="./assets/img/homeContent2.png" alt="" /></div>
           </div>
-          <p class="home-text">Chỉ cần một tấm ảnh, còn lại Mirinda lo hết! </p>
+          <p class="home-text">
+            Chỉ 30s, có ngay ảnh Superman để <br />
+            khoe với tụ vui của bạn 
+          </p>
           <div class="gender-wrapper">
-            <div class="gender-male selected" id="gender-male">
+            <div class="gender-male" id="gender-male">
               <img src="./assets/img/male.png" alt="" />
             </div>
             <div class="gender-female" id="gender-female">
               <img src="./assets/img/female.png" alt="" />
             </div>
           </div>
-          <div class="startButton" id="startButton">
-            <img src="./assets/img/start.png" alt="" />
+          <div class="checkbox-wrapper-46">
+            <input class="inp-cbx" id="cbx-46" type="checkbox" />
+            <label class="cbx" for="cbx-46"
+              ><span>
+                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+              ><span
+                >Đồng ý xác nhận&nbsp;
+                <p id="ruleBtn">thông tin và điều lệ.</p>
+                 </span
+              >
+            </label>
+          </div>
+          <div class="logo-home">
+            <div class="logo-left " data-src="./assets/img/logo-superman.png">
+              <img
+                class="lazy blur"
+                src="./assets/img/logo-superman.png"
+                alt=""
+                data-src="./assets/img/logo-superman.png"
+              />
+            </div>
+            <div class="logo-right" data-src="./assets/img/logomirinda.png">
+              <img
+                class="lazy blur"
+                src="./assets/img/logomirinda.png"
+                alt=""
+                data-src="./assets/img/logomirinda.png"
+              />
+            </div>
           </div>
         </div>
-        <footer class="footer">
-          <div class="logo-left " data-src="./assets/img/logo-superman.png">
-            <img
-              class="lazy blur"
-              src="./assets/img/logo-superman.png"
-              alt=""
-              data-src="./assets/img/logo-superman.png"
-            />
+        <div class="home-footer">
+          <div><img src="./assets/img/superman.png" alt="" /></div>
+          <div><img src="./assets/img/cans.png" alt="" /></div>
+        </div>
+      </div>
+      <div id="step-rule" class="step-rule">
+        <div class="navbar">
+          <div id="back1Btn">
+            <img src="./assets/img/backBtn.png" alt="" />
           </div>
-          <div class="footer-content" data-src="./assets/img/homeFooter.png">
-            <img
-              class="lazy blur"
-              src="./assets/img/homeFooter.png"
-              alt=""
-              data-src="./assets/img/homeFooter.png"
-            />
+          <div></div>
+        </div>
+        <div class="rule-wrapper">
+          <div>
+            <h1>ĐIỀU KHOẢN SỬ DỤNG</h1>
+            <p class="custom-title">1. Quyền hạn và trách nhiệm của BTC</p>
+            <ul class="custom-bullet">
+              <li>
+                Các hoạt động trong cuộc thi tuân thủ nghiêm chỉnh các quy định
+                của pháp luật Việt Nam.
+              </li>
+              <li>
+                Nếu người dự thi có hành vi gian lận, hoặc trong trường hợp có
+                đơn thư khiếu nại, tố cáo gửi thì BTC có quyền loại bỏ tài khoản
+                của người dự thi đó mà không cần thông báo.
+              </li>
+              <li>
+                BTC được quyền sử dụng dữ liệu của người dự thi cho việc truyền
+                thông, quảng bá về thử thách hoặc thương hiệu (nếu có). Đối với
+                các bài dự thi được lựa chọn để sản xuất, BTC sẽ được quyền sử
+                dụng hình ảnh vô thời hạn và không phải chịu bất kỳ chi phí mua
+                bản quyền hình ảnh nào. Ngoài ra, BTC có quyền yêu cầu bạn cung
+                cấp hình ảnh gốc để đối chứng, làm căn cứ trao thưởng.
+              </li>
+              <li>
+                BTC không chịu trách nhiệm và từ chối mọi tranh chấp liên quan
+                đến bản quyền trong trường hợp người dự thi sử dụng hình ảnh đã
+                tham gia cuộc thi này cho bất kỳ chương trình, cuộc thi hoặc các
+                hoạt động nào khác.
+              </li>
+              <li>
+                BTC có quyền loại bỏ các tài khoản đăng ký không đáp ứng các quy
+                tắc, quy định thử thách. Bao gồm các tài khoản được gửi với
+                thông tin không hợp lệ hoặc không chính xác.
+              </li>
+              <li>Mọi quyết định của BTC là quyết định cuối cùng.</li>
+            </ul>
+            <p class="custom-title">
+              2. Quyền hạn và trách nhiệm của Người Tham Gia
+            </p>
+            <ul class="custom-bullet">
+              <li>
+                Hình ảnh dự thi khi được chia sẻ phải phù hợp với văn hóa thuần
+                phong mỹ tục và pháp luật Việt Nam, không có các yếu tố mang
+                tính chính trị, tuân thủ các quy định về nội dung của Facebook.
+              </li>
+              <li>
+                Bài dự thi không được phép chứa logo, tên và hình ảnh của các
+                dòng sản phẩm không phải thương hiệu của Mirinda Vietnam.
+              </li>
+              <li>
+                BTC chỉ chấp nhận bài thi hợp lệ được chia sẻ về Facebook ở chế
+                độ công khai và đã thực hiện đủ các thể lệ của BTC. 
+              </li>
+              <li>
+                Hình ảnh dự thi do chính người dự thi thực hiện, đảm bảo không
+                sao chép, sử dụng lại bất kỳ tác phẩm, sản phẩm, tài liệu nào
+                của bất kỳ cá nhân/tổ chức nào khác dưới bất kỳ hình thức nào.
+                BTC sẽ không chịu trách nhiệm cho bất kì bài dự thi nào vi phạm
+                bản quyền của tác phẩm khác hoặc được chứng minh là sao chép lại
+                tác phẩm hoặc sử dụng hình ảnh của người khác.
+              </li>
+            </ul>
           </div>
-          <div class="logo-right" data-src="./assets/img/logomirinda.png">
-            <img
-              class="lazy blur"
-              src="./assets/img/logomirinda.png"
-              alt=""
-              data-src="./assets/img/logomirinda.png"
-            />
+          <div class="startButton" id="startButton">
+            <img src="./assets/img/agree.png" alt="" />
           </div>
-        </footer>
+        </div>
       </div>
       <div class="step-two" id="step-two">
         <div class="navbar">
           <div id="back2Btn">
             <img src="./assets/img/backBtn.png" alt="" />
           </div>
-          <div class="homeBtn" onclick="returnHome()">
-            <img src="./assets/img/homeBtn.png" alt="" />
-          </div>
-        </div>
-        <div class="gender-header">
-          <div>
-            <img src="./assets/img/genderMale.png" alt="" />
-          </div>
-          <p>Chọn 1 trong 5 mẫu sau</p>
-        </div>
-        <div class="gender-wrapper-male" id="gender-wrapper-male">
-          <div class="gender-container">
-            <div class="example-item active" id="male01">
-              <p>Mẫu 01</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/male01.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="male02">
-              <p>Mẫu 02</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/male02.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="male03">
-              <p>Mẫu 3</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/male03.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="gender-container">
-            <div class="example-item" id="male04">
-              <p>Mẫu 04</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/male04.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="male05">
-              <p>Mẫu 05</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/male05.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="gender-wrapper-female" id="gender-wrapper-female">
-          <div class="gender-container">
-            <div class="example-item active" id="female01">
-              <p>Mẫu 01</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/female01.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="female02">
-              <p>Mẫu 02</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/female02.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="female03">
-              <p>Mẫu 3</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/female03.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="gender-container">
-            <div class="example-item" id="female04">
-              <p>Mẫu 04</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/female04.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="female05">
-              <p>Mẫu 05</p>
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img
-                    src="./assets/img/female05.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nextStepTwo" id="nextStepTwo">
-          <img src="./assets/img/continue.png" alt="" />
+          <div></div>
         </div>
         <div class="footer-logo">
           <div>
@@ -209,6 +168,103 @@
           </div>
           <div>
             <img src="./assets/img/logomirinda.png" alt="" />
+          </div>
+        </div>
+        <div class="gender-header">
+          <div>
+            <img src="./assets/img/genderMale.png" alt="" />
+          </div>
+        </div>
+        <div class="gender-wrapper-male" id="gender-wrapper-male">
+          <div class="gender-container">
+            <div class="example-item active" id="male01">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/male01.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="male02">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/male02.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gender-container">
+            <div class="example-item" id="male03">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/male03.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="male04">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/male04.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gender-container">
+            <div class="example-item" id="male05">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/male05.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="nextStepTwo" id="nextStepMaleTwo">
+              <img src="./assets/img/continue.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="gender-wrapper-female" id="gender-wrapper-female">
+          <div class="gender-container">
+            <div class="example-item active" id="female01">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/female01.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="female02">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/female02.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gender-container">
+            <div class="example-item" id="female03">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/female03.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="example-item" id="female04">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/female04.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gender-container">
+            <div class="example-item" id="female05">
+              <div class="example-wrapper">
+                <div class="example-image">
+                  <img src="./assets/img/female05.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="nextStepTwo" id="nextStepFemaleTwo">
+              <img src="./assets/img/continue.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -220,8 +276,14 @@
           <div id="captureAgain" style="display: none;">
             <img src="./assets/img/backBtn.png" alt="" />
           </div>
-          <div class="homeBtn" onclick="returnHome()">
-            <img src="./assets/img/homeBtn.png" alt="" />
+          <div></div>
+        </div>
+        <div class="footer-logo">
+          <div>
+            <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
+          <div>
+            <img src="./assets/img/logomirinda.png" alt="" />
           </div>
         </div>
         <div class="camera-container">
@@ -241,19 +303,21 @@
           <button id="capture" disabled>
             <img src="./assets/img/capture.png" alt="" />
           </button>
+
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            style="display:none"
+          />
+          <button id="uploadImg">
+            <img src="./assets/img/upload.png" alt="" />
+          </button>
         </div>
         <div id="controls-next">
           <button id="createAi">
             <img src="./assets/img/continue.png" alt="" />
           </button>
-        </div>
-        <div class="footer-logo">
-          <div>
-            <img src="./assets/img/logo-superman.png" alt="" />
-          </div>
-          <div>
-            <img src="./assets/img/logomirinda.png" alt="" />
-          </div>
         </div>
       </div>
       <div class="step-final" id="step-final">
@@ -264,11 +328,8 @@
           </div>
         </div>
         <div class="image-final" id="image-final">
-          <img
-            src="./assets/img/male01.jpg"
-            alt=""
-            id="imageAi"
-          />
+          <!-- <div class="name-wrapper"><p id="name-wrapper"></p></div> -->
+          <img src="./assets/img/male01.jpg" alt="" id="imageAi" />
         </div>
         <div class="final-button">
           <button id="shareBtn">
@@ -301,7 +362,14 @@
         <p id="loading-text">AI Booth đang tạo</p>
         <p>Xin chờ trong giây lát...</p>
       </div>
+      <div class="rule-overlay" id="rule-overlay"></div>
       <div class="screen-pc">
+        <div class="qr-wrapper">
+          <div><img src="./assets/img/qr.png" alt="" /></div>
+        </div>
+        <div class="qr-content">
+          <img src="./assets/img/scanQR.png" alt="" />
+        </div>
         <footer class="footer">
           <div class="logo-left " data-src="./assets/img/logo-superman.png">
             <img
@@ -309,14 +377,6 @@
               src="./assets/img/logo-superman.png"
               alt=""
               data-src="./assets/img/logo-superman.png"
-            />
-          </div>
-          <div class="footer-content" data-src="./assets/img/homeFooter.png">
-            <img
-              class="lazy blur"
-              src="./assets/img/homeFooter.png"
-              alt=""
-              data-src="./assets/img/homeFooter.png"
             />
           </div>
           <div class="logo-right" data-src="./assets/img/logomirinda.png">
@@ -328,10 +388,46 @@
             />
           </div>
         </footer>
+        <div class="mirinda-can">
+          <img src="./assets/img/canScreen.png" alt="" />
+        </div>
+        <div class="superman-screen">
+          <img src="./assets/img/superman.png" alt="" />
+        </div>
+      </div>
+      <div class="overlay-lds-ring">
+        <div class="lds-ring" id="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="overlay-banner" id="overlay-banner">
+        <div class="banner-container" id="banner-container">
+          <div><img src="./assets/img/banner.png" alt="" /></div>
+          <div id="closeBannerBtn">
+            <img src="./assets/img/close.png" alt="" />
+          </div>
+          <div><img src="./assets/img/joinnow.png" alt="" /></div>
+        </div>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div class="close-btn" id="closeModal">Đóng</div>
+          <img id="image" />
+          <button id="cropBtn">Xác nhận</button>
+        </div>
       </div>
     </main>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
     <script src="./assets/js/all.js"></script>
+    <!-- <script src="./assets/js/fetch.js"></script> -->
   </body>
 </html>

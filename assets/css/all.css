@@ -1,16 +1,18 @@
 .home {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   /* display: none; */
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   transition: display 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+
 }
 
 .home-content {
-  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +27,7 @@
 }
 
 .header-content div {
-  width: 80%;
+  width: 90%;
 }
 
 .header-content div img {
@@ -34,23 +36,23 @@
 
 .header-content div:last-child img {
   width: 90%;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .home-text {
   color: white;
   font-size: 0.85rem;
   font-weight: 600;
-  margin-top: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
 }
 
 .gender-wrapper {
-  width: 90%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  z-index: 2;
 }
 
 .gender-wrapper-male,
@@ -59,7 +61,7 @@
 }
 
 .gender-wrapper div {
-  width: 40%;
+  width: 48%;
   cursor: pointer;
   filter: grayscale(1);
 }
@@ -77,46 +79,163 @@
 }
 
 .startButton {
-  width: 80%;
+  width: 40%;
   cursor: pointer;
+  position: absolute;
+  bottom: -4%;
 }
 
 .startButton:hover {
-  opacity: 0.75F;
+  opacity: 0.75;
 }
 
 .startButton img {
   width: 100%;
 }
 
-.footer {
-  max-width: 100%;
+.logo-home {
+  max-width: 90%;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
 }
 
-.footer div img {
+.logo-home div img {
   width: 100%;
 }
 
-.footer .logo-left {
+.logo-home .logo-left {
   width: 30%;
   z-index: 2;
 }
 
-.footer .logo-right {
+.logo-home .logo-right {
   width: 20%;
 }
 
-.footer .footer-content {
+/* Step rule */
+.step-rule {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  transition: display 0.3s ease-in-out;
+  z-index: 10;
+  color: white;
+}
+
+.step-rule .rule-wrapper {
+  position: relative;
+  width: 90%;
+  /* max-height: 75vh; */
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 0.65);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-rule .navbar {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.step-rule::before {
+  content: "";
+  display: block;
   position: absolute;
-  width: 75%;
+  top: 0;
+  left: 0;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.75; */
+  z-index: -1;
+}
+
+.rule-wrapper div h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #750101;
+  font-weight: 700;
+}
+
+.rule-wrapper div ul {
+  list-style: inside;
+  font-size: 0.55rem;
+  text-align: left;
+  color: #580707;
+}
+
+.rule-wrapper div ul.custom-bullet {
+  list-style: none;
+}
+
+.rule-wrapper div ul.custom-bullet li {
+  position: relative;
+  padding-left: 0.75rem;
+  text-align: justify;
+  word-spacing: 0.1rem;
+  line-height: 0.75rem;
+}
+
+.rule-wrapper div ul.custom-bullet li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -0.05em;
+  color: #580707;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.rule-wrapper div ul.custom-bullet li:last-child {
+  margin-bottom: 1rem;
+}
+
+.custom-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  text-align: left;
+  font-size: 0.6rem;
+  color: #580707;
+}
+
+.home-footer {
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+}
+
+.home-footer div img {
+  width: 100%;
+}
+
+.home-footer div:first-child {
+  position: absolute;
+  width: 150%;
+  bottom: -20%;
   left: 50%;
-  bottom: -5%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%);
+}
+
+.home-footer div:last-child {
+  position: absolute;
+  bottom: -3%;
+  right: 0;
+  width: 60%;
 }
 
 /* Step Two */
@@ -138,11 +257,11 @@
   color: white;
   font-style: italic;
   font-weight: 600;
-  margin-bottom: 2rem;
+  align-items: center;
 }
 
 .gender-header div {
-  width: 70%;
+  width: 100%;
   margin-bottom: 0.5rem;
 }
 
@@ -164,7 +283,7 @@
 }
 
 .gender-container .example-item {
-  max-width: 25%;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,7 +345,7 @@
 }
 
 .nextStepTwo {
-  width: 50%;
+  width: 30%;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -364,7 +483,7 @@
 }
 
 #controls-next button {
-  width: 45%;
+  width: 80%;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -427,11 +546,36 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  aspect-ratio: 5/6;
 }
 
 .image-final img {
   width: 100%;
   border: 5px white solid;
+}
+
+.name-wrapper {
+  width: 50%;
+  max-width: 50%;
+  max-height: 10%;
+
+  position: absolute;
+  z-index: 99;
+  top: 78%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+
+  background-color: orange;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  box-shadow: #9c9c9c 3px 3px;
+  border: white 1px solid;
+  font-size: 1em;
+  line-height: 1.2em;
 }
 
 .step-final .final-button {
@@ -486,4 +630,56 @@ video {
 
 .drawer-container div img {
   width: 100%;
+}
+
+.overlay-lds-ring {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+  z-index: 90;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #ff4b1d;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ff4b1d transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
