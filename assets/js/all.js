@@ -426,7 +426,7 @@ fileInput.addEventListener("change", () => {
 
     image.onload = () => {
       cropper = new Cropper(image, {
-        aspectRatio: 0.692/1,
+        aspectRatio: 0.692 / 1,
         viewMode: 1,
         autoCropArea: 1,
         dragMode: "move",
@@ -476,71 +476,80 @@ cropBtn.addEventListener("click", () => {
   ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
   ctx.drawImage(croppedCanvas, 0, 0, 842, 1216);
   const base64Crop = targetCanvas.toDataURL("image/png");
-  new Promise((resolve, reject) => {
-    const formImg = new FormData();
-    formImg.append("Procedure", "Upload_Avatar");
-    formImg.append(
-      "Parameters",
-      base64Crop.replace("data:image/png;base64,", "")
-    );
-    const bearerToken = getCookie("bearer");
-    fetch(apiUpload, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${bearerToken}`,
-      },
-      body: formImg,
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.text();
-        } else if (response === 401) {
-        } else {
-          throw new Error("Login failed");
-        }
-      })
-      .then((data) => {
-        resolve(data);
-        localStorage.setItem(
-          "img",
-          `https://game.advietnam.vn/avatars/${
-            JSON.parse(data).Objects[0].ResponseData
-          }`
-        );
-        canvas.src = base64Crop;
-        canvas.style.transform = "scaleX(1)";
-        canvas.style.display = "block";
-        cameraContainer.style.display = "none";
-        captureButton.disabled = false;
-        controls.style.display = "none";
-        controlsNext.style.display = "flex";
-        document.getElementById("back3Btn").style.display = "none";
-        document.getElementById("captureAgain").style.display = "block";
-        loading.style.display = "none";
-      })
-      .catch((error) => {
-        console.error("Error Create AI:", error);
-        Toastify({
-          text: "Tải ảnh thất bại! Vui lòng chụp lại",
-          duration: 1000,
-          close: false,
-          gravity: "top",
-          position: "center",
-          backgroundColor:
-            "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
-          style: getToastStyle(),
-        }).showToast();
-        cameraContainer.style.display = "flex";
-        controls.style.display = "block";
-        controlsNext.style.display = "none";
-        canvas.src = "";
-        canvas.style.display = "none";
-        document.getElementById("back3Btn").style.display = "block";
-        document.getElementById("captureAgain").style.display = "none";
-        reject(error);
-      });
-  });
-
+  // new Promise((resolve, reject) => {
+  //   const formImg = new FormData();
+  //   formImg.append("Procedure", "Upload_Avatar");
+  //   formImg.append(
+  //     "Parameters",
+  //     base64Crop.replace("data:image/png;base64,", "")
+  //   );
+  //   const bearerToken = getCookie("bearer");
+  //   fetch(apiUpload, {
+  //     method: "POST",
+  //     headers: {
+  //       Authorization: `Bearer ${bearerToken}`,
+  //     },
+  //     body: formImg,
+  //   })
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.text();
+  //       } else if (response === 401) {
+  //       } else {
+  //         throw new Error("Login failed");
+  //       }
+  //     })
+  //     .then((data) => {
+  //       resolve(data);
+  //       localStorage.setItem(
+  //         "img",
+  //         `https://game.advietnam.vn/avatars/${
+  //           JSON.parse(data).Objects[0].ResponseData
+  //         }`
+  //       );
+  //       canvas.src = base64Crop;
+  //       canvas.style.transform = "scaleX(1)";
+  //       canvas.style.display = "block";
+  //       cameraContainer.style.display = "none";
+  //       captureButton.disabled = false;
+  //       controls.style.display = "none";
+  //       controlsNext.style.display = "flex";
+  //       document.getElementById("back3Btn").style.display = "none";
+  //       document.getElementById("captureAgain").style.display = "block";
+  //       loading.style.display = "none";
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error Create AI:", error);
+  //       Toastify({
+  //         text: "Tải ảnh thất bại! Vui lòng chụp lại",
+  //         duration: 1000,
+  //         close: false,
+  //         gravity: "top",
+  //         position: "center",
+  //         backgroundColor:
+  //           "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+  //         style: getToastStyle(),
+  //       }).showToast();
+  //       cameraContainer.style.display = "flex";
+  //       controls.style.display = "block";
+  //       controlsNext.style.display = "none";
+  //       canvas.src = "";
+  //       canvas.style.display = "none";
+  //       document.getElementById("back3Btn").style.display = "block";
+  //       document.getElementById("captureAgain").style.display = "none";
+  //       reject(error);
+  //     });
+  // });
+  canvas.src = base64Crop;
+  canvas.style.transform = "scaleX(1)";
+  canvas.style.display = "block";
+  cameraContainer.style.display = "none";
+  captureButton.disabled = false;
+  controls.style.display = "none";
+  controlsNext.style.display = "flex";
+  document.getElementById("back3Btn").style.display = "none";
+  document.getElementById("captureAgain").style.display = "block";
+  loading.style.display = "none";
   modal.style.display = "none";
   cropper.destroy();
   cropper = null;
@@ -776,7 +785,11 @@ document.addEventListener("click", (event) => {
   const isClickInsideDrawer = drawerShare.contains(event.target);
   const isClickOnButton = shareBtn.contains(event.target);
 
-  if (!isClickInsideDrawer && !isClickOnButton && !document.getElementById("overlay-banner")) {
+  if (
+    !isClickInsideDrawer &&
+    !isClickOnButton &&
+    !document.getElementById("overlay-banner")
+  ) {
     drawerShare.classList.remove("active");
   }
 });
