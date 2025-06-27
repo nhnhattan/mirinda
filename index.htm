@@ -3,8 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Superman Mirinda</title>
 
+    <meta name="author" content="Mirinda X Superman" />
+    <meta
+      name="description"
+      content="Trải nghiệm siêu vui cùng SUPERMAN. Chỉ 4 bước hóa thân thành siêu anh hùng với Mirinda."
+    />
+    <meta
+      name="keywords"
+      content="mirinda, superman, mirinda x superman, mirinda vietnam, siêu anh hùng, mirinda superman"
+    />
+    <meta property="og:title" content="Mirinda x Superman" />
+    <meta
+      property="og:description"
+      content="Trải nghiệm siêu vui cùng SUPERMAN. Chỉ 4 bước hóa thân thành siêu anh hùng với Mirinda."
+    />
+    <meta
+      property="og:image"
+      content="./assets/main-img/meta-description.png"
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Superman x Mirinda</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logomirinda.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
@@ -12,6 +33,7 @@
 
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,45 +44,47 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
       rel="stylesheet"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
   </head>
   <body>
     <main>
       <div id="home" class="home">
         <div class="home-content">
+          <div class="logo-header">
+            <img src="./assets/img/mirindaHome.png" alt="" />
+          </div>
           <div class="header-content">
             <div><img src="./assets/img/homeContent.png" alt="" /></div>
           </div>
-          <p class="home-text">
-            Chỉ 30s, có ngay ảnh Superman để <br />
-            khoe với tụ vui của bạn 
-          </p>
+          <p class="home-text">Chỉ 4 bước hóa thân thành siêu anh hùng</p>
+          <div class="step-content">
+            <img src="./assets/img/step-one.png" alt="" />
+          </div>
           <div class="gender-wrapper">
             <div class="gender-male" id="gender-male">
-              <img src="./assets/img/male.png" alt="" />
+              <img src="./assets/img/maleDefault.png" alt="" />
             </div>
             <div class="gender-female" id="gender-female">
-              <img src="./assets/img/female.png" alt="" />
+              <img src="./assets/img/femaleDefault.png" alt="" />
             </div>
           </div>
-          <div class="checkbox-wrapper-46">
-            <input class="inp-cbx" id="cbx-46" type="checkbox" />
-            <label class="cbx" for="cbx-46"
-              ><span>
-                <svg width="12px" height="10px" viewbox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-              ><span
-                >Đồng ý xác nhận&nbsp;
-                <p id="ruleBtn">thông tin và điều lệ.</p>
-                 </span
-              >
-            </label>
+          <div class="checkbox-wrapper-10">
+            <input class="tgl tgl-flip" id="cb5" type="checkbox" />
+            <label
+              class="tgl-btn"
+              data-tg-off="Đồng ý"
+              data-tg-on="&#x2713;"
+              for="cb5"
+            ></label>
+            <span
+              >Đồng ý xác nhận&nbsp;
+              <p id="ruleBtn">thông tin và điều lệ.</p>
+               </span
+            >
           </div>
           <div class="logo-home">
             <div class="logo-left " data-src="./assets/img/logo-superman.png">
               <img
-                class="lazy blur"
+                class=""
                 src="./assets/img/logo-superman.png"
                 alt=""
                 data-src="./assets/img/logo-superman.png"
@@ -68,7 +92,7 @@
             </div>
             <div class="logo-right" data-src="./assets/img/logomirinda.png">
               <img
-                class="lazy blur"
+                class=""
                 src="./assets/img/logomirinda.png"
                 alt=""
                 data-src="./assets/img/logomirinda.png"
@@ -77,8 +101,22 @@
           </div>
         </div>
         <div class="home-footer">
-          <div><img src="./assets/img/superman.png" alt="" /></div>
-          <div><img src="./assets/img/cans.png" alt="" /></div>
+          <div>
+            <img
+              src="./assets/img/superman.png"
+              data-src="./assets/img/superman.png"
+              alt=""
+              class=""
+            />
+          </div>
+          <div>
+            <img
+              src="./assets/img/cans.png"
+              data-src="./assets/img/cans.png"
+              alt=""
+              class=""
+            />
+          </div>
         </div>
       </div>
       <div id="step-rule" class="step-rule">
@@ -146,7 +184,21 @@
                 của bất kỳ cá nhân/tổ chức nào khác dưới bất kỳ hình thức nào.
                 BTC sẽ không chịu trách nhiệm cho bất kì bài dự thi nào vi phạm
                 bản quyền của tác phẩm khác hoặc được chứng minh là sao chép lại
-                tác phẩm hoặc sử dụng hình ảnh của người khác.
+                tác phẩm hoặc sử dụng hình ảnh của người khác. 
+              </li>
+              <li>
+                Người chơi đã đọc, hiểu và đồng ý với Chính sách và quyền riêng
+                tư của SPVB
+                https://www.suntorypepsico.vn/page/chinh-sach-bao-mat
+              </li>
+              <li>
+                Thể lệ có hiệu lực kể từ thời điểm bài đăng công bố cuộc thi.
+                Bằng cách tham gia cuộc thi, người chơi xem như đã đọc, hiểu rõ
+                và đồng ý với mọi nội dung thể lệ cuộc thi này. 
+              </li>
+              <li>
+                Mọi thắc mắc từ người chơi vui lòng liên hệ Fanpage Mirinda
+                Vietnam https://www.facebook.com/MirindaVietNam
               </li>
             </ul>
           </div>
@@ -154,40 +206,54 @@
             <img src="./assets/img/agree.png" alt="" />
           </div>
         </div>
+        <div class="rule-logo">
+          <img src="./assets/img/logo-footer.png" alt="" />
+        </div>
       </div>
       <div class="step-two" id="step-two">
-        <div class="navbar">
-          <div id="back2Btn">
-            <img src="./assets/img/backBtn.png" alt="" />
-          </div>
-          <div></div>
-        </div>
         <div class="footer-logo">
           <div>
             <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
+          <div id="back2Btn">
+            <img src="./assets/img/backBtn.png" alt="" />
           </div>
           <div>
             <img src="./assets/img/logomirinda.png" alt="" />
           </div>
         </div>
+
         <div class="gender-header">
+          <div class="step-content">
+            <img src="./assets/img/steptwo.png" alt="" />
+          </div>
           <div>
-            <img src="./assets/img/genderMale.png" alt="" />
+            <img id="genderHeader" src="./assets/img/genderMale.png" alt="" />
           </div>
         </div>
         <div class="gender-wrapper-male" id="gender-wrapper-male">
           <div class="gender-container">
-            <div class="example-item active" id="male01">
+            <div class="example-item" id="male01">
               <div class="example-wrapper">
                 <div class="example-image">
-                  <img src="./assets/img/male01.jpg" alt="" />
+                  <img
+                    src="./assets/img/male01.png"
+                    data-src="./assets/img/male01.png"
+                    alt=""
+                    class=""
+                  />
                 </div>
               </div>
             </div>
             <div class="example-item" id="male02">
               <div class="example-wrapper">
                 <div class="example-image">
-                  <img src="./assets/img/male02.jpg" alt="" />
+                  <img
+                    src="./assets/img/male02.png"
+                    data-src="./assets/img/male02.png"
+                    alt=""
+                    class=""
+                  />
                 </div>
               </div>
             </div>
@@ -196,26 +262,18 @@
             <div class="example-item" id="male03">
               <div class="example-wrapper">
                 <div class="example-image">
-                  <img src="./assets/img/male03.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="male04">
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img src="./assets/img/male04.jpg" alt="" />
+                  <img
+                    src="./assets/img/male03.png"
+                    data-src="./assets/img/male03.png"
+                    alt=""
+                    class=""
+                    style="transform-origin: 35% 6%;"
+                  />
                 </div>
               </div>
             </div>
           </div>
-          <div class="gender-container">
-            <div class="example-item" id="male05">
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img src="./assets/img/male05.jpg" alt="" />
-                </div>
-              </div>
-            </div>
+          <div class="genderBtn-wrapper">
             <div class="nextStepTwo" id="nextStepMaleTwo">
               <img src="./assets/img/continue.png" alt="" />
             </div>
@@ -223,17 +281,27 @@
         </div>
         <div class="gender-wrapper-female" id="gender-wrapper-female">
           <div class="gender-container">
-            <div class="example-item active" id="female01">
+            <div class="example-item" id="female01">
               <div class="example-wrapper">
                 <div class="example-image">
-                  <img src="./assets/img/female01.jpg" alt="" />
+                  <img
+                    src="./assets/img/female01.png"
+                    alt=""
+                    data-src="./assets/img/female01.png"
+                    class=""
+                  />
                 </div>
               </div>
             </div>
             <div class="example-item" id="female02">
               <div class="example-wrapper">
                 <div class="example-image">
-                  <img src="./assets/img/female02.jpg" alt="" />
+                  <img
+                    src="./assets/img/female02.png"
+                    alt=""
+                    data-src="./assets/img/female02.png"
+                    class=""
+                  />
                 </div>
               </div>
             </div>
@@ -242,49 +310,49 @@
             <div class="example-item" id="female03">
               <div class="example-wrapper">
                 <div class="example-image">
-                  <img src="./assets/img/female03.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="example-item" id="female04">
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img src="./assets/img/female04.jpg" alt="" />
+                  <img
+                    src="./assets/img/female03.png"
+                    alt=""
+                    data-src="./assets/img/female03.png"
+                    class=""
+                    style="transform-origin: 60% 15%;"
+                  />
                 </div>
               </div>
             </div>
           </div>
-          <div class="gender-container">
-            <div class="example-item" id="female05">
-              <div class="example-wrapper">
-                <div class="example-image">
-                  <img src="./assets/img/female05.jpg" alt="" />
-                </div>
-              </div>
-            </div>
+          <div class="genderBtn-wrapper">
             <div class="nextStepTwo" id="nextStepFemaleTwo">
               <img src="./assets/img/continue.png" alt="" />
             </div>
           </div>
         </div>
+        <div class="footer-logo">
+          <img src="./assets/img/logo-footer.png" alt="" />
+        </div>
       </div>
       <div class="step-three" id="step-three">
-        <div class="navbar">
+        <div class="footer-logo">
+          <div>
+            <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
           <div id="back3Btn">
             <img src="./assets/img/backBtn.png" alt="" />
           </div>
           <div id="captureAgain" style="display: none;">
             <img src="./assets/img/backBtn.png" alt="" />
           </div>
-          <div></div>
-        </div>
-        <div class="footer-logo">
-          <div>
-            <img src="./assets/img/logo-superman.png" alt="" />
-          </div>
           <div>
             <img src="./assets/img/logomirinda.png" alt="" />
           </div>
+        </div>
+        <div class="camera-content">
+          <div><img src="./assets/img/stepthree.png" alt="" /></div>
+          <div><img src="./assets/img/stepthreecontent.png" alt="" /></div>
+          <p>
+            Hãy tháo kính và chụp rõ toàn bộ gương mặt <br />để hình ảnh chất
+            lượng nhất nha
+          </p>
         </div>
         <div class="camera-container">
           <div class="wait-camera">
@@ -296,7 +364,7 @@
           <div id="flash"></div>
           <canvas id="frame-overlay"></canvas>
         </div>
-        <div class="capture-image">
+        <div class="capture-image" id="capture-image">
           <canvas id="canvas" width="842" height="1216"></canvas>
         </div>
         <div id="controls">
@@ -315,28 +383,50 @@
           </button>
         </div>
         <div id="controls-next">
-          <button id="createAi">
+          <button id="addName">
             <img src="./assets/img/continue.png" alt="" />
           </button>
         </div>
-      </div>
-      <div class="step-final" id="step-final">
-        <div class="navbar">
-          <div></div>
-          <div class="homeBtn" onclick="returnHome()">
-            <img src="./assets/img/homeBtn.png" alt="" />
+        <div class="footer-logo">
+          <img src="./assets/img/logo-footer.png" alt="" />
+        </div>
+
+        <div class="name-drawer-overlay" id="drawerOverlay">
+          <div class="name-drawer" id="drawerPanel">
+            <div class="name-content">
+              <img src="./assets/img/nameContent.png" alt="" />
+            </div>
+            <input type="text" id="nameInput" placeholder="Tên của bạn" />
+            <p id="result"></p>
+            <div class="createAi" id="createAi">
+              <img src="./assets/img/continueName.png" alt="" />
+            </div>
           </div>
         </div>
+      </div>
+      <div class="step-final" id="step-final">
+        <div class="footer-logo">
+          <div>
+            <img src="./assets/img/logo-superman.png" alt="" />
+          </div>
+          <div>
+            <img src="./assets/img/logomirinda.png" alt="" />
+          </div>
+        </div>
+        <div class="step-content">
+          <div><img src="./assets/img/stepfour.png" alt="" /></div>
+          <div><img src="./assets/img/stepfourcontent.png" alt="" /></div>
+        </div>
         <div class="image-final" id="image-final">
-          <!-- <div class="name-wrapper"><p id="name-wrapper"></p></div> -->
-          <img src="./assets/img/male01.jpg" alt="" id="imageAi" />
+          <div class="name-wrapper"><p id="name-wrapper"></p></div>
+          <img src="" alt="" id="imageAi" />
         </div>
         <div class="final-button">
-          <button id="shareBtn">
-            <img src="./assets/img/share.png" alt="" />
-          </button>
           <button id="downloadBtn">
             <img src="./assets/img/download.png" alt="" />
+          </button>
+          <button class="homeBtn" onclick="returnHome()">
+            <img src="./assets/img/returnHome.png" alt="" />
           </button>
         </div>
         <div class="drawer-container" id="drawerShare">
@@ -349,18 +439,18 @@
           </div>
         </div>
         <div class="footer-logo">
-          <div>
-            <img src="./assets/img/logo-superman.png" alt="" />
-          </div>
-          <div>
-            <img src="./assets/img/logomirinda.png" alt="" />
-          </div>
+          <img src="./assets/img/logo-footer.png" alt="" />
         </div>
       </div>
       <div class="overlay" id="overlay-loading">
-        <div class="loader"></div>
-        <p id="loading-text">AI Booth đang tạo</p>
-        <p>Xin chờ trong giây lát...</p>
+        <!-- <div class="loader"></div> -->
+        <div class="loader-gif">
+          <img src="./assets/img/loading.gif" alt="" />
+        </div>
+        <p>
+          Quá trình biến hình thường mất 15-20s để ra hình đẹp nhất
+          <br />Bạn kiên nhẫn chờ tí nha!
+        </p>
       </div>
       <div class="rule-overlay" id="rule-overlay"></div>
       <div class="screen-pc">
@@ -373,7 +463,7 @@
         <footer class="footer">
           <div class="logo-left " data-src="./assets/img/logo-superman.png">
             <img
-              class="lazy blur"
+              class=""
               src="./assets/img/logo-superman.png"
               alt=""
               data-src="./assets/img/logo-superman.png"
@@ -381,7 +471,7 @@
           </div>
           <div class="logo-right" data-src="./assets/img/logomirinda.png">
             <img
-              class="lazy blur"
+              class=""
               src="./assets/img/logomirinda.png"
               alt=""
               data-src="./assets/img/logomirinda.png"
@@ -392,7 +482,7 @@
           <img src="./assets/img/canScreen.png" alt="" />
         </div>
         <div class="superman-screen">
-          <img src="./assets/img/superman.png" alt="" />
+          <img src="./assets/img/supermanScreen.png" alt="" />
         </div>
       </div>
       <div class="overlay-lds-ring">
@@ -405,11 +495,18 @@
       </div>
       <div class="overlay-banner" id="overlay-banner">
         <div class="banner-container" id="banner-container">
-          <div><img src="./assets/img/banner.png" alt="" /></div>
-          <div id="closeBannerBtn">
+          <div class="banner-item">
+            <img src="./assets/img/banner.png" alt="" />
+          </div>
+          <div class="banner-item" id="closeBannerBtn">
             <img src="./assets/img/close.png" alt="" />
           </div>
-          <div><img src="./assets/img/joinnow.png" alt="" /></div>
+          <div class="banner-item">
+            <button id="shareBtn">
+              <img src="./assets/img/share.png" alt="" />
+            </button>
+            <button><img src="./assets/img/joinnow.png" alt="" /></button>
+          </div>
         </div>
       </div>
       <div id="modal" class="modal">
@@ -420,14 +517,14 @@
         </div>
       </div>
     </main>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 
     <script src="./assets/js/all.js"></script>
-    <!-- <script src="./assets/js/fetch.js"></script> -->
+    <script src="./assets/js/fetch.js"></script>
   </body>
 </html>

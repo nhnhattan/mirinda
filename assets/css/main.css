@@ -124,9 +124,9 @@ table {
 }
 
 main {
-  min-height: 100vh;
-  width: 100vw;
-  max-width: 100vw;
+  min-height: 100svh;
+  width: 100dvw;
+  max-width: 100dvw;
   overflow: hidden;
   background-image: url("../img/bg.png");
   background-repeat: no-repeat;
@@ -175,29 +175,37 @@ button {
 }
 
 .footer-logo {
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .footer-logo div {
-  width: 20%;
+  width: 18%;
 }
 
-.footer-logo div:first-child {
-  width: 30%;
+.footer-logo div:nth-child(2) img {
+  width: 50%;
 }
 
 .footer-logo div img {
+  width: 90%;
+}
+
+.footer-logo img {
   width: 100%;
+}
+
+#captureAgain img {
+  width: 50%;
 }
 
 .overlay {
   position: fixed;
   width: 110%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
   display: none;
   align-items: center;
@@ -207,6 +215,14 @@ button {
   color: white;
   text-align: center;
   font-size: 0.75rem;
+}
+
+.overlay .loader-gif {
+  margin-bottom: 1rem;
+}
+
+.overlay .loader-gif img {
+  width: 100%;
 }
 
 .overlay p {
@@ -254,8 +270,8 @@ button {
   margin: 0;
   padding: 0;
   display: none;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   background-image: url("../img/ScreenBG.png");
   background-size: cover;
   background-position: center;
@@ -294,7 +310,7 @@ button {
 }
 
 .screen-pc .footer .logo-left {
-  width: 20%;
+  width: 10%;
 }
 
 .screen-pc .footer .logo-left img {
@@ -302,7 +318,8 @@ button {
 }
 
 .screen-pc .footer .logo-right {
-  width: 15%;
+  width: 10%;
+  margin-right: 3em;
 }
 
 .screen-pc .footer .logo-right img {
@@ -312,9 +329,9 @@ button {
 .screen-pc .qr-content {
   width: 25%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translate(0%, -50%);
-  left: 2%;
+  right: 8%;
 }
 
 .screen-pc .qr-content img {
@@ -324,8 +341,8 @@ button {
 .screen-pc .mirinda-can {
   width: 25%;
   position: absolute;
-  bottom: -5%;
-  left: 2%;
+  bottom: -3%;
+  right: 8%;
 }
 
 .screen-pc .mirinda-can img {
@@ -333,109 +350,148 @@ button {
 }
 
 .screen-pc .superman-screen {
-  width: 65%;
+  width: 50%;
   position: absolute;
-  bottom: -30%;
-  right: -12%;
+  bottom: -45%;
+  left: -5%;
 }
 
 .screen-pc .superman-screen img {
   width: 100%;
 }
 
-.checkbox-wrapper-46 {
+.checkbox-wrapper-10 {
   width: 100%;
-  z-index: 2;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  box-shadow: none;
-}
-
-.checkbox-wrapper-46 input[type="checkbox"] {
-  display: none;
-  visibility: hidden;
-}
-
-.checkbox-wrapper-46 .cbx {
-  margin: auto;
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: pointer;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: .75rem;
+  margin-top: -1rem;
 }
-.checkbox-wrapper-46 .cbx span {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translate3d(0, 0, 0);
-}
-.checkbox-wrapper-46 .cbx span:first-child {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 3px;
-  transform: scale(1);
-  vertical-align: middle;
-  border: 3px solid #ffffff;
-  transition: all 0.2s ease;
-  background-color: rgb(206, 206, 206);
-}
-.checkbox-wrapper-46 .cbx span:first-child svg {
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 16px;
-  stroke-dashoffset: 16px;
-  transition: all 0.3s ease;
-  transition-delay: 0.1s;
-  transform: translate3d(0, 0, 0);
-}
-.checkbox-wrapper-46 .cbx span:first-child:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: #07a0ff;
-  display: block;
-  transform: scale(0);
-  opacity: 1;
-  border-radius: 50%;
-}
-.checkbox-wrapper-46 .cbx span:last-child {
-  padding-left: 0.75rem;
+
+.checkbox-wrapper-10 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-top: 0.75em;
+  margin-left: 1rem;
   color: white;
   font-weight: 700;
-  font-size: 0.8rem;
-  display: flex;
-  font-style: italic;
-}
-.checkbox-wrapper-46 .cbx:hover span:first-child {
-  border-color: #ffffff;
 }
 
-.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
-  background: #07a0ff;
-  border-color: #07a0ff;
-  animation: wave-46 0.4s ease;
+.checkbox-wrapper-10 .tgl {
+  display: none;
 }
-.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
-  stroke-dashoffset: 0;
+.checkbox-wrapper-10 .tgl,
+.checkbox-wrapper-10 .tgl:after,
+.checkbox-wrapper-10 .tgl:before,
+.checkbox-wrapper-10 .tgl *,
+.checkbox-wrapper-10 .tgl *:after,
+.checkbox-wrapper-10 .tgl *:before,
+.checkbox-wrapper-10 .tgl + .tgl-btn {
+  box-sizing: border-box;
 }
-.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
-  transform: scale(3.5);
-  opacity: 0;
-  transition: all 0.6s ease;
+.checkbox-wrapper-10 .tgl::-moz-selection,
+.checkbox-wrapper-10 .tgl:after::-moz-selection,
+.checkbox-wrapper-10 .tgl:before::-moz-selection,
+.checkbox-wrapper-10 .tgl *::-moz-selection,
+.checkbox-wrapper-10 .tgl *:after::-moz-selection,
+.checkbox-wrapper-10 .tgl *:before::-moz-selection,
+.checkbox-wrapper-10 .tgl + .tgl-btn::-moz-selection,
+.checkbox-wrapper-10 .tgl::selection,
+.checkbox-wrapper-10 .tgl:after::selection,
+.checkbox-wrapper-10 .tgl:before::selection,
+.checkbox-wrapper-10 .tgl *::selection,
+.checkbox-wrapper-10 .tgl *:after::selection,
+.checkbox-wrapper-10 .tgl *:before::selection,
+.checkbox-wrapper-10 .tgl + .tgl-btn::selection {
+  background: none;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 3em;
+  height: 1.2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn:after,
+.checkbox-wrapper-10 .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn:after {
+  left: 0;
+}
+.checkbox-wrapper-10 .tgl + .tgl-btn:before {
+  display: none;
+}
+.checkbox-wrapper-10 .tgl:checked + .tgl-btn:after {
+  left: 50%;
 }
 
-@keyframes wave-46 {
-  50% {
-    transform: scale(0.9);
-  }
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn {
+  padding: 2px;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  perspective: 100px;
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:after,
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+  display: inline-block;
+  transition: all 0.4s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0.8rem;
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+  content: attr(data-tg-on);
+  background: rgb(0, 138, 69);
+  color: #ffffff;
+  border: #ffffff 5px solid;
+  font-size: 0.6em;
+  font-weight: 700;
+  transform: rotateY(-180deg);
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+  background: white;
+  color: #08a400;
+  border: #0ae318 5px solid;
+  content: attr(data-tg-off);
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+.checkbox-wrapper-10 .tgl-flip + .tgl-btn:active:before {
+  transform: rotateY(-20deg);
+}
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:before {
+  transform: rotateY(180deg);
+}
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:after {
+  transform: rotateY(0);
+  left: 0;
+  background: #007e4e;
+}
+.checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:active:after {
+  transform: rotateY(20deg);
 }
 
 #ruleBtn {
@@ -463,7 +519,7 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 15;
+  z-index: 12;
   display: none;
   align-items: center;
   justify-content: center;
@@ -476,15 +532,15 @@ button {
   position: relative;
   overflow: visible;
   width: 375px;
-  height: 400px;
-  margin-bottom: 2rem;
+  height: 595px;
+  margin-bottom: 6rem;
 }
 
 .overlay-banner .banner-container div img {
   width: 100%;
 }
 
-.overlay-banner .banner-container div:nth-child(1) {
+.overlay-banner .banner-container .banner-item:nth-child(1) {
   width: 90%;
   position: absolute;
   top: 50%;
@@ -492,19 +548,34 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.overlay-banner .banner-container div:nth-child(2) {
+.overlay-banner .banner-container .banner-item:nth-child(2) {
   width: 10%;
   position: absolute;
   top: 6%;
   right: 3%;
 }
 
-.overlay-banner .banner-container div:nth-child(3) {
-  width: 70%;
+.overlay-banner .banner-container .banner-item:nth-child(3) {
+  width: 80%;
   position: absolute;
   bottom: -5%;
   left: 50%;
   transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.overlay-banner .banner-container .banner-item:nth-child(3) button {
+  width: 45%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.overlay-banner .banner-container .banner-item:nth-child(3) button img {
+  width: 100%;
 }
 
 #preview {
@@ -526,7 +597,9 @@ button {
 }
 .modal-content {
   max-width: 80%;
-  max-height: 80vh;
+  max-height: 80dvh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -547,28 +620,31 @@ button {
   font-size: 1.25rem;
   color: white;
   background-color: #ff2f2f;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  font-weight: 700;
 }
 
 #cropBtn {
   font-size: 1.25rem;
+  letter-spacing: .05em;
   color: white;
   background-color: #00ba46;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .cropper-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   overflow: hidden;
   display: flex !important;
   justify-content: center !important;

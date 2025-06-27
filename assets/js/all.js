@@ -1,1 +1,1616 @@
-const _0x41e5c3=_0x6681;(function(_0x3691a2,_0x3dead){const _0x11a768=_0x6681,_0x75f3a7=_0x3691a2();while(!![]){try{const _0x4954a8=-parseInt(_0x11a768(0x238))/0x1*(-parseInt(_0x11a768(0x1f1))/0x2)+-parseInt(_0x11a768(0x20e))/0x3*(parseInt(_0x11a768(0x244))/0x4)+-parseInt(_0x11a768(0x1ef))/0x5+parseInt(_0x11a768(0x270))/0x6+-parseInt(_0x11a768(0x293))/0x7*(parseInt(_0x11a768(0x280))/0x8)+parseInt(_0x11a768(0x224))/0x9*(-parseInt(_0x11a768(0x222))/0xa)+parseInt(_0x11a768(0x26d))/0xb;if(_0x4954a8===_0x3dead)break;else _0x75f3a7['push'](_0x75f3a7['shift']());}catch(_0xcdf234){_0x75f3a7['push'](_0x75f3a7['shift']());}}}(_0x1441,0x52488));const apiUpload=_0x41e5c3(0x27a),apiInit=_0x41e5c3(0x26b),apiAI=_0x41e5c3(0x256),examps=document[_0x41e5c3(0x1ee)]('.example-item'),video=document['getElementById'](_0x41e5c3(0x225)),canvas=document[_0x41e5c3(0x208)](_0x41e5c3(0x271)),context=canvas['getContext']('2d'),captureButton=document['getElementById']('capture'),countdownDisplay=document['getElementById'](_0x41e5c3(0x215)),cameraContainer=document['querySelector'](_0x41e5c3(0x204)),flashOverlay=document[_0x41e5c3(0x208)]('flash'),controls=document['getElementById'](_0x41e5c3(0x23f)),controlsNext=document[_0x41e5c3(0x208)]('controls-next'),stepHome=document[_0x41e5c3(0x208)]('home'),stepRule=document[_0x41e5c3(0x208)](_0x41e5c3(0x241)),stepTwo=document[_0x41e5c3(0x208)](_0x41e5c3(0x279)),stepThree=document[_0x41e5c3(0x208)](_0x41e5c3(0x254)),stepFinal=document[_0x41e5c3(0x208)]('step-final'),screenPC=document[_0x41e5c3(0x26f)](_0x41e5c3(0x230)),gdMale=document[_0x41e5c3(0x208)](_0x41e5c3(0x205)),gdFemale=document[_0x41e5c3(0x208)](_0x41e5c3(0x1fb)),gdMaleWrapper=document['getElementById'](_0x41e5c3(0x278)),gdFemaleWrapper=document[_0x41e5c3(0x208)](_0x41e5c3(0x231)),startBtn=document[_0x41e5c3(0x208)]('startButton'),shareBtn=document[_0x41e5c3(0x208)](_0x41e5c3(0x211)),drawerShare=document[_0x41e5c3(0x208)](_0x41e5c3(0x261)),checkbox=document[_0x41e5c3(0x208)](_0x41e5c3(0x248)),closeBanner=document[_0x41e5c3(0x208)](_0x41e5c3(0x273)),loading=document[_0x41e5c3(0x208)](_0x41e5c3(0x249)),fileInput=document[_0x41e5c3(0x208)](_0x41e5c3(0x218)),modal=document[_0x41e5c3(0x208)](_0x41e5c3(0x207)),closeModal=document[_0x41e5c3(0x208)](_0x41e5c3(0x236)),image=document[_0x41e5c3(0x208)](_0x41e5c3(0x24a)),cropBtn=document[_0x41e5c3(0x208)]('cropBtn'),croppedResult=document[_0x41e5c3(0x208)](_0x41e5c3(0x28c));let cropper,globalData={},finalCanvas,gender='',isChoose;const lazyLoadInstance=new LazyLoad({'elements_selector':_0x41e5c3(0x26a),'callback_loaded':_0x1b8454=>{const _0x1f5d1d=_0x41e5c3;_0x1b8454[_0x1f5d1d(0x264)][_0x1f5d1d(0x1f3)]('blur');}});function isDesktop(){const _0x56f246=_0x41e5c3,_0x1b3ff1=navigator[_0x56f246(0x277)][_0x56f246(0x22c)](),_0x9fa5ba=/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i['test'](_0x1b3ff1);return!_0x9fa5ba;}if(isDesktop())stepHome[_0x41e5c3(0x21c)][_0x41e5c3(0x259)]='none',screenPC[_0x41e5c3(0x21c)][_0x41e5c3(0x259)]=_0x41e5c3(0x27f),Swal[_0x41e5c3(0x22e)]({'title':_0x41e5c3(0x252),'text':'Vui\x20lòng\x20quét\x20sử\x20dụng\x20điện\x20thoại\x20để\x20quét\x20QR','icon':_0x41e5c3(0x20b),'showConfirmButton':![],'didOpen':()=>{},'customClass':{'htmlContainer':_0x41e5c3(0x21e),'confirmButton':_0x41e5c3(0x21f)},'allowEnterKey':![],'showConfirmButton':![],'showCloseButton':![]});else{}function getCookie(_0x206f7b){const _0x23d205=_0x41e5c3,_0x298338=';\x20'+document['cookie'],_0x4bb5b2=_0x298338[_0x23d205(0x21d)](';\x20'+_0x206f7b+'=');if(_0x4bb5b2['length']===0x2)return _0x4bb5b2['pop']()[_0x23d205(0x21d)](';')[_0x23d205(0x28e)]();return null;}function setCookie(_0x4ea26f,_0x47d2c2){const _0x560bd7=_0x41e5c3;document['cookie']=_0x4ea26f+'='+_0x47d2c2+_0x560bd7(0x250);}function _0x1441(){const _0x46bf47=['classList','setCropBoxData','onload','srcObject','createObjectURL','Không\x20truy\x20cập\x20được\x20webcam:','.lazy','https://game.advietnam.vn/app/api/sql/Public_Return_Json','Bạn\x20chưa\x20chọn\x20giới\x20tính!\x20Vui\x20lòng\x20quay\x20lại!','9655459OmLLJJ','.overlay-lds-ring','querySelector','1859652FtLHsB','canvas','then','closeBannerBtn','opacity','Face_Swap','toggle','userAgent','gender-wrapper-male','step-two','https://game.advietnam.vn/app/api/sql/Authorized_Return_Json','transform','play','target','getUserMedia','block','1448824GQXbLF','Procedure','height','videoWidth','back2Btn','getCropBoxData','length','showToast','linear-gradient(to\x20right,\x20#00b09b,\x20#96c93d)','createAi','find','https://game.advietnam.vn/images-ai/','croppedResult','4rem','shift','replace','mediaDevices','nextStepMaleTwo','shareFbBtn','14UBhBzq','files','scaleX(1)','gamer','overlay-banner','querySelectorAll','969825tEmWTH','captureAgain','6RrJPwi','getContainerData','remove','error','getContext','flex','female','image/png','parse','Sao\x20chép\x20thành\x20công!','gender-female','from','addEventListener','catch','high','Tạo\x20ảnh\x20thất\x20bại!\x20Vui\x20lòng\x20thử\x20lại','destroy','data:image/png;base64,','Empty\x20response','.camera-container','gender-male','onloadedmetadata','modal','getElementById','downloadBtn','append','info','add','disabled','6Uoxnpx','drawImage','rotate','shareBtn','frame-overlay','blob','80%','countdown','contains','innerWidth','fileInput','Tạo\x20ảnh\x20thành\x20công!','checked','Lỗi\x20khi\x20tải\x20ảnh:','style','split','swal-text-large','swal2-confirm-large','uploadImg','Objects','20tmPtgV','hor','541197pwAbVm','video','active','clearRect','flash','nextStepFemaleTwo','center','Error\x20Create\x20AI:','toLowerCase','6rem','fire','share\x20fb','.screen-pc','gender-wrapper-female','save','stringify','text','true','closeModal','top','68622pUxavE','writeText','ResponseData','Login\x20failed\x20or\x20unauthorized','POST','textContent','rule','controls','cookie','step-rule','getCroppedCanvas','log','760216TnOPNU','status','share\x20zalo','imageAi','cbx-46','overlay-loading','image','videoHeight','selected','male','linear-gradient(to\x20right,rgb(255,\x2040,\x2040),rgb(255,\x2074,\x2074))','click',';\x20path=/','src','Thông\x20báo!','change','step-three','getComputedStyle','https://game.advietnam.vn/app/api/ai/Authorized_Ai_Image','Bearer\x20','1.2rem','display','back3Btn','forEach','move','getItem','width','none','=;\x20expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20UTC;\x20path=/','drawerShare','Parameters','clipboard'];_0x1441=function(){return _0x46bf47;};return _0x1441();}function deleteCookie(_0x3279eb){const _0x3de8b2=_0x41e5c3;document[_0x3de8b2(0x240)]=_0x3279eb+_0x3de8b2(0x260);}function getToastStyle(){const _0x330a7b=_0x41e5c3;return window[_0x330a7b(0x217)]>0x834&&window['innerHeight']>0xbb8?{'fontSize':_0x330a7b(0x22d),'padding':_0x330a7b(0x28d),'maxWidth':_0x330a7b(0x214),'textAlign':_0x330a7b(0x22a)}:{'fontSize':_0x330a7b(0x258),'padding':'1rem','maxWidth':'80%','textAlign':'center'};}gdMale[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x37b008=_0x41e5c3;gdFemale[_0x37b008(0x264)][_0x37b008(0x1f3)]('selected'),gdMale[_0x37b008(0x264)][_0x37b008(0x20c)](_0x37b008(0x24c)),gender=_0x37b008(0x24d);}),gdFemale[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x2c19aa=_0x41e5c3;gdFemale[_0x2c19aa(0x264)][_0x2c19aa(0x20c)](_0x2c19aa(0x24c)),gdMale['classList']['remove'](_0x2c19aa(0x24c)),gender=_0x2c19aa(0x1f7);}),checkbox['addEventListener']('change',function(){const _0x7cc2ff=_0x41e5c3;this[_0x7cc2ff(0x21a)]&&(gender?(stepRule['style'][_0x7cc2ff(0x259)]=_0x7cc2ff(0x25f),stepHome[_0x7cc2ff(0x21c)][_0x7cc2ff(0x259)]=_0x7cc2ff(0x1f6),document[_0x7cc2ff(0x26f)]('.overlay-lds-ring')['style']['display']=_0x7cc2ff(0x1f6),setTimeout(()=>{const _0x46bf8b=_0x7cc2ff;stepHome[_0x46bf8b(0x21c)][_0x46bf8b(0x259)]=_0x46bf8b(0x25f),stepTwo[_0x46bf8b(0x21c)]['display']=_0x46bf8b(0x1f6),document[_0x46bf8b(0x26f)]('.overlay-lds-ring')[_0x46bf8b(0x21c)][_0x46bf8b(0x259)]=_0x46bf8b(0x25f),setCookie('rule',_0x46bf8b(0x235));},0x3e8),gender===_0x7cc2ff(0x24d)?(gdMaleWrapper[_0x7cc2ff(0x21c)][_0x7cc2ff(0x259)]='block',gdFemaleWrapper[_0x7cc2ff(0x21c)][_0x7cc2ff(0x259)]=_0x7cc2ff(0x25f)):(gdFemaleWrapper['style'][_0x7cc2ff(0x259)]=_0x7cc2ff(0x27f),gdMaleWrapper[_0x7cc2ff(0x21c)][_0x7cc2ff(0x259)]=_0x7cc2ff(0x25f))):(Toastify({'text':_0x7cc2ff(0x26c),'duration':0x3e8,'close':![],'gravity':_0x7cc2ff(0x237),'position':_0x7cc2ff(0x22a),'backgroundColor':_0x7cc2ff(0x24e),'style':getToastStyle()})['showToast'](),this[_0x7cc2ff(0x21a)]=![]));}),document[_0x41e5c3(0x208)]('ruleBtn')[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),_0x14a192=>{const _0x284bc6=_0x41e5c3;_0x14a192['stopPropagation'](),_0x14a192['preventDefault'](),stepHome[_0x284bc6(0x21c)][_0x284bc6(0x259)]=_0x284bc6(0x25f),stepRule[_0x284bc6(0x21c)][_0x284bc6(0x259)]=_0x284bc6(0x1f6);}),startBtn[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x1bd998=_0x41e5c3;gender?(checkbox[_0x1bd998(0x21a)]=!![],stepRule[_0x1bd998(0x21c)][_0x1bd998(0x259)]='none',stepHome[_0x1bd998(0x21c)][_0x1bd998(0x259)]=_0x1bd998(0x1f6),document['querySelector'](_0x1bd998(0x26e))[_0x1bd998(0x21c)][_0x1bd998(0x259)]='flex',setTimeout(()=>{const _0x1ad3b2=_0x1bd998;stepHome[_0x1ad3b2(0x21c)][_0x1ad3b2(0x259)]=_0x1ad3b2(0x25f),stepTwo[_0x1ad3b2(0x21c)][_0x1ad3b2(0x259)]=_0x1ad3b2(0x1f6),document['querySelector']('.overlay-lds-ring')[_0x1ad3b2(0x21c)]['display']=_0x1ad3b2(0x25f),setCookie(_0x1ad3b2(0x23e),_0x1ad3b2(0x235));},0x3e8),gender===_0x1bd998(0x24d)?(gdMaleWrapper[_0x1bd998(0x21c)]['display']=_0x1bd998(0x27f),gdFemaleWrapper[_0x1bd998(0x21c)][_0x1bd998(0x259)]=_0x1bd998(0x25f)):(gdFemaleWrapper[_0x1bd998(0x21c)]['display']=_0x1bd998(0x27f),gdMaleWrapper[_0x1bd998(0x21c)][_0x1bd998(0x259)]=_0x1bd998(0x25f))):(Toastify({'text':_0x1bd998(0x26c),'duration':0x3e8,'close':![],'gravity':_0x1bd998(0x237),'position':_0x1bd998(0x22a),'backgroundColor':'linear-gradient(to\x20right,rgb(255,\x2040,\x2040),rgb(255,\x2074,\x2074))','style':getToastStyle()})[_0x1bd998(0x287)](),stepRule['style'][_0x1bd998(0x259)]=_0x1bd998(0x25f),stepHome[_0x1bd998(0x21c)][_0x1bd998(0x259)]='flex');}),examps[_0x41e5c3(0x25b)](_0x5e5d8a=>{const _0x39ee81=_0x41e5c3;_0x5e5d8a[_0x39ee81(0x1fd)](_0x39ee81(0x24f),()=>{const _0xe6f74e=_0x39ee81;examps['forEach'](_0x46a3ae=>_0x46a3ae[_0xe6f74e(0x264)][_0xe6f74e(0x1f3)]('active')),_0x5e5d8a[_0xe6f74e(0x264)][_0xe6f74e(0x20c)](_0xe6f74e(0x226));});}),document[_0x41e5c3(0x208)](_0x41e5c3(0x284))[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x2f311b=_0x41e5c3;stepHome[_0x2f311b(0x21c)][_0x2f311b(0x259)]=_0x2f311b(0x1f6),stepTwo['style']['display']=_0x2f311b(0x25f),gdMaleWrapper[_0x2f311b(0x21c)][_0x2f311b(0x259)]=_0x2f311b(0x25f),gdFemaleWrapper[_0x2f311b(0x21c)][_0x2f311b(0x259)]=_0x2f311b(0x25f),checkbox[_0x2f311b(0x21a)]=![];}),document[_0x41e5c3(0x208)]('back1Btn')[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x55a1a0=_0x41e5c3;stepHome[_0x55a1a0(0x21c)][_0x55a1a0(0x259)]=_0x55a1a0(0x1f6),stepTwo[_0x55a1a0(0x21c)]['display']=_0x55a1a0(0x25f),stepRule[_0x55a1a0(0x21c)][_0x55a1a0(0x259)]=_0x55a1a0(0x25f),gdMaleWrapper[_0x55a1a0(0x21c)][_0x55a1a0(0x259)]=_0x55a1a0(0x25f),gdFemaleWrapper[_0x55a1a0(0x21c)][_0x55a1a0(0x259)]='none',checkbox[_0x55a1a0(0x21a)]=![];}),document[_0x41e5c3(0x208)](_0x41e5c3(0x291))['addEventListener'](_0x41e5c3(0x24f),()=>{const _0x53d5d8=_0x41e5c3,_0x9928d8=Array[_0x53d5d8(0x1fc)](examps)[_0x53d5d8(0x28a)](_0x4f9012=>_0x4f9012[_0x53d5d8(0x264)][_0x53d5d8(0x216)](_0x53d5d8(0x226)));isChoose=_0x9928d8['id'],stepTwo[_0x53d5d8(0x21c)][_0x53d5d8(0x259)]=_0x53d5d8(0x25f),stepThree[_0x53d5d8(0x21c)]['display']='flex';}),document['getElementById'](_0x41e5c3(0x229))[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x11ee57=_0x41e5c3,_0x26f204=Array['from'](examps)[_0x11ee57(0x28a)](_0x528fec=>_0x528fec[_0x11ee57(0x264)]['contains'](_0x11ee57(0x226)));isChoose=_0x26f204['id'],stepTwo[_0x11ee57(0x21c)]['display']=_0x11ee57(0x25f),stepThree['style']['display']=_0x11ee57(0x1f6);});async function startFaceDetection(){const _0x38640d=_0x41e5c3,_0x9c6fd3=document[_0x38640d(0x208)]('video'),_0x37c716=document[_0x38640d(0x208)](_0x38640d(0x212)),_0x21983b=_0x37c716[_0x38640d(0x1f5)]('2d'),_0x27399b=document[_0x38640d(0x208)](_0x38640d(0x245)),_0x212b58=document['querySelector']('.wait-camera');navigator[_0x38640d(0x290)][_0x38640d(0x27e)]({'video':{}})['then'](_0x359f81=>{const _0xe7305d=_0x38640d;_0x9c6fd3[_0xe7305d(0x21c)][_0xe7305d(0x274)]='1',_0x212b58[_0xe7305d(0x21c)]['display']=_0xe7305d(0x25f),_0x9c6fd3[_0xe7305d(0x267)]=_0x359f81,_0x9c6fd3[_0xe7305d(0x206)]=()=>{const _0x3474b9=_0xe7305d;_0x9c6fd3[_0x3474b9(0x27c)](),_0x37c716[_0x3474b9(0x25e)]=_0x9c6fd3[_0x3474b9(0x283)],_0x37c716[_0x3474b9(0x282)]=_0x9c6fd3[_0x3474b9(0x24b)];},captureButton[_0xe7305d(0x20d)]=![];})[_0x38640d(0x1fe)](_0x190565=>{const _0x58f8bb=_0x38640d;console[_0x58f8bb(0x1f4)](_0x58f8bb(0x269),_0x190565),_0x27399b[_0x58f8bb(0x23d)]='Không\x20truy\x20cập\x20được\x20webcam.';});}startFaceDetection(),captureButton[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),function(){const _0x4f9caf=_0x41e5c3;captureButton['disabled']=!![];let _0x199cc2=0x3;countdownDisplay[_0x4f9caf(0x21c)][_0x4f9caf(0x259)]=_0x4f9caf(0x1f6),countdownDisplay[_0x4f9caf(0x23d)]=_0x199cc2,captureButton['disabled']=!![];const _0x25aa9d=setInterval(()=>{const _0x3ff01a=_0x4f9caf;_0x199cc2--,_0x199cc2>0x0?countdownDisplay[_0x3ff01a(0x23d)]=_0x199cc2:(clearInterval(_0x25aa9d),countdownDisplay['style']['display']='none',flashOverlay[_0x3ff01a(0x264)][_0x3ff01a(0x20c)](_0x3ff01a(0x228)),setTimeout(()=>{const _0x26317d=_0x3ff01a;flashOverlay['classList'][_0x26317d(0x1f3)](_0x26317d(0x228));const _0x3a8874=video['videoWidth'],_0x2985e8=video[_0x26317d(0x24b)],_0x25a9e2=canvas[_0x26317d(0x25e)]/canvas[_0x26317d(0x282)];let _0x3e7c74,_0x1b7059,_0x5b4c79,_0x5f4e1d;_0x3a8874/_0x2985e8>_0x25a9e2?(_0x1b7059=_0x2985e8,_0x3e7c74=_0x1b7059*_0x25a9e2,_0x5b4c79=(_0x3a8874-_0x3e7c74)/0x2,_0x5f4e1d=0x0):(_0x3e7c74=_0x3a8874,_0x1b7059=_0x3e7c74/_0x25a9e2,_0x5b4c79=0x0,_0x5f4e1d=(_0x2985e8-_0x1b7059)/0x2);context[_0x26317d(0x227)](0x0,0x0,canvas[_0x26317d(0x25e)],canvas['height']),context[_0x26317d(0x232)](),context['translate'](canvas[_0x26317d(0x25e)]/0x2,canvas[_0x26317d(0x282)]/0x2);localStorage[_0x26317d(0x25d)](_0x26317d(0x210))==_0x26317d(0x223)&&context[_0x26317d(0x210)](rotationAngle*Math['PI']/0xb4);context[_0x26317d(0x20f)](video,_0x5b4c79,_0x5f4e1d,_0x3e7c74,_0x1b7059,-canvas[_0x26317d(0x25e)]/0x2,-canvas[_0x26317d(0x282)]/0x2,canvas[_0x26317d(0x25e)],canvas['height']),context['restore']();const _0x24dc33=canvas['toDataURL'](_0x26317d(0x1f8));capAI=_0x24dc33[_0x26317d(0x28f)](_0x26317d(0x202),''),canvas[_0x26317d(0x251)]=_0x24dc33,canvas['style'][_0x26317d(0x259)]=_0x26317d(0x27f),cameraContainer[_0x26317d(0x21c)][_0x26317d(0x259)]=_0x26317d(0x25f),captureButton[_0x26317d(0x20d)]=![],controls[_0x26317d(0x21c)][_0x26317d(0x259)]='none',controlsNext[_0x26317d(0x21c)][_0x26317d(0x259)]='flex',document[_0x26317d(0x208)](_0x26317d(0x25a))['style'][_0x26317d(0x259)]=_0x26317d(0x25f),document[_0x26317d(0x208)]('captureAgain')[_0x26317d(0x21c)]['display']='block';},0x1f4));},0x3e8);}),document[_0x41e5c3(0x208)](_0x41e5c3(0x220))['addEventListener'](_0x41e5c3(0x24f),()=>{const _0x90cad0=_0x41e5c3;fileInput[_0x90cad0(0x24f)]();}),fileInput[_0x41e5c3(0x1fd)](_0x41e5c3(0x253),()=>{const _0x318e2a=_0x41e5c3;if(fileInput['files']&&fileInput[_0x318e2a(0x294)][_0x318e2a(0x286)]>0x0){const _0x2636ba=fileInput[_0x318e2a(0x294)][0x0],_0x4adfd9=URL[_0x318e2a(0x268)](_0x2636ba);image[_0x318e2a(0x251)]=_0x4adfd9,modal['style'][_0x318e2a(0x259)]='flex',cropper&&cropper['destroy'](),image[_0x318e2a(0x266)]=()=>{const _0x255501=_0x318e2a;cropper=new Cropper(image,{'aspectRatio':0.692/0x1,'viewMode':0x1,'autoCropArea':0x1,'dragMode':_0x255501(0x25c),'cropBoxResizable':!![],'cropBoxMovable':!![],'ready'(){const _0xcc01e1=_0x255501,_0x773dd6=cropper[_0xcc01e1(0x285)](),_0x1f9721=cropper[_0xcc01e1(0x1f2)](),_0x477f86=_0x1f9721[_0xcc01e1(0x25e)]/0x34a;cropper[_0xcc01e1(0x265)]({'width':210.5*_0x477f86,'height':0x130*_0x477f86});}});};}}),closeModal['addEventListener']('click',()=>{const _0x10db67=_0x41e5c3;modal[_0x10db67(0x21c)][_0x10db67(0x259)]=_0x10db67(0x25f),cropper&&(cropper[_0x10db67(0x201)](),cropper=null),image[_0x10db67(0x251)]='',resetFileInput();}),cropBtn[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x2c3749=_0x41e5c3;if(!cropper)return;loading[_0x2c3749(0x21c)][_0x2c3749(0x259)]=_0x2c3749(0x1f6);const _0x4ac8a8=cropper[_0x2c3749(0x242)]({'width':0x34a,'height':0x4c0,'imageSmoothingEnabled':!![],'imageSmoothingQuality':_0x2c3749(0x1ff)}),_0x1fc646=document[_0x2c3749(0x208)](_0x2c3749(0x271)),_0x590ca8=_0x1fc646['getContext']('2d');_0x1fc646[_0x2c3749(0x25e)]=0x34a,_0x1fc646[_0x2c3749(0x282)]=0x4c0,_0x590ca8[_0x2c3749(0x227)](0x0,0x0,_0x1fc646[_0x2c3749(0x25e)],_0x1fc646[_0x2c3749(0x282)]),_0x590ca8[_0x2c3749(0x20f)](_0x4ac8a8,0x0,0x0,0x34a,0x4c0);const _0x2b6512=_0x1fc646['toDataURL']('image/png');canvas[_0x2c3749(0x251)]=_0x2b6512,canvas[_0x2c3749(0x21c)][_0x2c3749(0x27b)]=_0x2c3749(0x1eb),canvas['style'][_0x2c3749(0x259)]=_0x2c3749(0x27f),cameraContainer['style'][_0x2c3749(0x259)]='none',captureButton[_0x2c3749(0x20d)]=![],controls[_0x2c3749(0x21c)][_0x2c3749(0x259)]=_0x2c3749(0x25f),controlsNext[_0x2c3749(0x21c)][_0x2c3749(0x259)]=_0x2c3749(0x1f6),document['getElementById'](_0x2c3749(0x25a))[_0x2c3749(0x21c)][_0x2c3749(0x259)]='none',document['getElementById'](_0x2c3749(0x1f0))[_0x2c3749(0x21c)][_0x2c3749(0x259)]=_0x2c3749(0x27f),loading[_0x2c3749(0x21c)][_0x2c3749(0x259)]=_0x2c3749(0x25f),modal['style'][_0x2c3749(0x259)]=_0x2c3749(0x25f),cropper[_0x2c3749(0x201)](),cropper=null,image[_0x2c3749(0x251)]='',resetFileInput();});function resetFileInput(){fileInput['value']='';}document[_0x41e5c3(0x208)]('captureAgain')[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0xb38e05=_0x41e5c3;cameraContainer[_0xb38e05(0x21c)][_0xb38e05(0x259)]='flex',controls[_0xb38e05(0x21c)][_0xb38e05(0x259)]=_0xb38e05(0x27f),controlsNext[_0xb38e05(0x21c)][_0xb38e05(0x259)]=_0xb38e05(0x25f),canvas[_0xb38e05(0x251)]='',canvas[_0xb38e05(0x21c)]['display']=_0xb38e05(0x25f),document[_0xb38e05(0x208)](_0xb38e05(0x25a))[_0xb38e05(0x21c)]['display']=_0xb38e05(0x27f),document[_0xb38e05(0x208)](_0xb38e05(0x1f0))[_0xb38e05(0x21c)][_0xb38e05(0x259)]=_0xb38e05(0x25f),canvas[_0xb38e05(0x21c)][_0xb38e05(0x27b)]='scaleX(-1)';}),document[_0x41e5c3(0x208)]('back3Btn')[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x408c00=_0x41e5c3;stepThree[_0x408c00(0x21c)][_0x408c00(0x259)]=_0x408c00(0x25f),stepTwo['style']['display']=_0x408c00(0x1f6);if(gender===_0x408c00(0x24d))gdMaleWrapper[_0x408c00(0x21c)][_0x408c00(0x259)]=_0x408c00(0x27f),gdFemaleWrapper[_0x408c00(0x21c)][_0x408c00(0x259)]='none';else gender===_0x408c00(0x1f7)&&(gdMaleWrapper[_0x408c00(0x21c)][_0x408c00(0x259)]=_0x408c00(0x25f),gdFemaleWrapper[_0x408c00(0x21c)][_0x408c00(0x259)]=_0x408c00(0x27f));}),document['getElementById'](_0x41e5c3(0x289))[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x4d5560=_0x41e5c3;loading[_0x4d5560(0x21c)][_0x4d5560(0x259)]=_0x4d5560(0x1f6),setTimeout(()=>{const _0x4a37c9=_0x4d5560;loading[_0x4a37c9(0x21c)][_0x4a37c9(0x259)]=_0x4a37c9(0x25f),Toastify({'text':_0x4a37c9(0x219),'duration':0x3e8,'close':![],'gravity':_0x4a37c9(0x237),'position':_0x4a37c9(0x22a),'backgroundColor':_0x4a37c9(0x288),'style':getToastStyle()})[_0x4a37c9(0x287)](),stepThree[_0x4a37c9(0x21c)][_0x4a37c9(0x259)]='none',stepFinal[_0x4a37c9(0x21c)][_0x4a37c9(0x259)]=_0x4a37c9(0x1f6);},0x3e8);});function _0x6681(_0x37afd2,_0x1a18da){const _0x144147=_0x1441();return _0x6681=function(_0x668121,_0x439477){_0x668121=_0x668121-0x1eb;let _0x3b137c=_0x144147[_0x668121];return _0x3b137c;},_0x6681(_0x37afd2,_0x1a18da);}function uploadFaceSwap(_0x51a7e0){return new Promise((_0x4da198,_0x39aadb)=>{const _0x1fe4fa=_0x6681,_0x23ec08=new FormData();_0x23ec08[_0x1fe4fa(0x20a)](_0x1fe4fa(0x281),_0x1fe4fa(0x275)),_0x23ec08['append'](_0x1fe4fa(0x262),JSON[_0x1fe4fa(0x233)]({'GamerCode':getCookie(_0x1fe4fa(0x1ec)),'SourceImageUrl':localStorage[_0x1fe4fa(0x25d)]('img'),'TargetImageUrl':_0x51a7e0}));const _0x119516=getCookie('bearer');fetch(apiAI,{'method':_0x1fe4fa(0x23c),'headers':{'Authorization':_0x1fe4fa(0x257)+_0x119516},'body':_0x23ec08})[_0x1fe4fa(0x272)](_0x1eea83=>{const _0x16f54a=_0x1fe4fa;if(_0x1eea83['ok'])return _0x1eea83[_0x16f54a(0x234)]();else throw new Error(_0x16f54a(0x23b));})[_0x1fe4fa(0x272)](_0x45cc11=>{const _0x3f243c=_0x1fe4fa,_0x48c730=JSON[_0x3f243c(0x1f9)](_0x45cc11)[_0x3f243c(0x221)][0x0][_0x3f243c(0x23a)];!_0x48c730?(loading[_0x3f243c(0x21c)]['display']=_0x3f243c(0x25f),Toastify({'text':'Tạo\x20ảnh\x20thất\x20bại!\x20Vui\x20lòng\x20thử\x20lại','duration':0x3e8,'close':![],'gravity':_0x3f243c(0x237),'position':_0x3f243c(0x22a),'backgroundColor':'linear-gradient(to\x20right,rgb(255,\x2040,\x2040),rgb(255,\x2074,\x2074))','style':getToastStyle()})['showToast'](),cameraContainer[_0x3f243c(0x21c)]['display']=_0x3f243c(0x1f6),controls[_0x3f243c(0x21c)][_0x3f243c(0x259)]=_0x3f243c(0x27f),controlsNext[_0x3f243c(0x21c)][_0x3f243c(0x259)]=_0x3f243c(0x25f),canvas[_0x3f243c(0x251)]='',canvas[_0x3f243c(0x21c)][_0x3f243c(0x259)]='none',document[_0x3f243c(0x208)](_0x3f243c(0x25a))[_0x3f243c(0x21c)][_0x3f243c(0x259)]=_0x3f243c(0x27f),document[_0x3f243c(0x208)](_0x3f243c(0x1f0))[_0x3f243c(0x21c)][_0x3f243c(0x259)]=_0x3f243c(0x25f),_0x39aadb(_0x3f243c(0x203))):(document[_0x3f243c(0x208)](_0x3f243c(0x247))[_0x3f243c(0x251)]=_0x3f243c(0x28b)+_0x48c730,loading['style'][_0x3f243c(0x259)]=_0x3f243c(0x25f),Toastify({'text':_0x3f243c(0x219),'duration':0x3e8,'close':![],'gravity':_0x3f243c(0x237),'position':_0x3f243c(0x22a),'backgroundColor':_0x3f243c(0x288),'style':getToastStyle()})['showToast'](),stepThree[_0x3f243c(0x21c)][_0x3f243c(0x259)]='none',stepFinal['style'][_0x3f243c(0x259)]=_0x3f243c(0x1f6),_0x4da198());})[_0x1fe4fa(0x1fe)](_0x104381=>{const _0x863afc=_0x1fe4fa;console['error'](_0x863afc(0x22b),_0x104381),loading[_0x863afc(0x21c)][_0x863afc(0x259)]=_0x863afc(0x25f),cameraContainer[_0x863afc(0x21c)]['display']=_0x863afc(0x1f6),controls[_0x863afc(0x21c)][_0x863afc(0x259)]=_0x863afc(0x27f),controlsNext[_0x863afc(0x21c)][_0x863afc(0x259)]=_0x863afc(0x25f),canvas['src']='',canvas[_0x863afc(0x21c)][_0x863afc(0x259)]=_0x863afc(0x25f),document[_0x863afc(0x208)](_0x863afc(0x25a))['style'][_0x863afc(0x259)]='block',document[_0x863afc(0x208)]('captureAgain')[_0x863afc(0x21c)]['display']=_0x863afc(0x25f),Toastify({'text':_0x863afc(0x200),'duration':0x3e8,'close':![],'gravity':_0x863afc(0x237),'position':_0x863afc(0x22a),'backgroundColor':'linear-gradient(to\x20right,rgb(255,\x2040,\x2040),rgb(255,\x2074,\x2074))','style':getToastStyle()})['showToast'](),_0x39aadb(_0x104381);});});}document[_0x41e5c3(0x208)]('shareBtn')['addEventListener'](_0x41e5c3(0x24f),()=>{const _0x1859af=_0x41e5c3;drawerShare['classList'][_0x1859af(0x276)]('active'),setTimeout(()=>{const _0x23cce0=_0x1859af;stepFinal&&window[_0x23cce0(0x255)](stepFinal)[_0x23cce0(0x259)]!==_0x23cce0(0x25f)&&fadeIn(document[_0x23cce0(0x208)]('overlay-banner'),0xc8);},0x3e8);}),document[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),_0x20c861=>{const _0x4145d2=_0x41e5c3,_0x1d784f=drawerShare[_0x4145d2(0x216)](_0x20c861[_0x4145d2(0x27d)]),_0x180ecc=shareBtn[_0x4145d2(0x216)](_0x20c861[_0x4145d2(0x27d)]);!_0x1d784f&&!_0x180ecc&&!document[_0x4145d2(0x208)](_0x4145d2(0x1ed))&&drawerShare[_0x4145d2(0x264)][_0x4145d2(0x1f3)](_0x4145d2(0x226));}),document[_0x41e5c3(0x208)]('copyBtn')[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x5706f9=_0x41e5c3,_0x4b35ca=document[_0x5706f9(0x208)]('imageAi')['src'];navigator[_0x5706f9(0x263)][_0x5706f9(0x239)](_0x4b35ca)[_0x5706f9(0x272)](()=>Toastify({'text':_0x5706f9(0x1fa),'duration':0x3e8,'close':![],'gravity':_0x5706f9(0x237),'position':_0x5706f9(0x22a),'backgroundColor':'linear-gradient(to\x20right,\x20#00b09b,\x20#96c93d)','style':getToastStyle()})[_0x5706f9(0x287)]())['catch'](_0x356501=>Toastify({'text':'Sao\x20chép\x20thất\x20bại!','duration':0x3e8,'close':![],'gravity':_0x5706f9(0x237),'position':_0x5706f9(0x22a),'backgroundColor':_0x5706f9(0x24e),'style':getToastStyle()})[_0x5706f9(0x287)]());}),document[_0x41e5c3(0x208)](_0x41e5c3(0x292))[_0x41e5c3(0x1fd)]('click',()=>{const _0x26069b=_0x41e5c3;console[_0x26069b(0x243)](_0x26069b(0x22f));}),document[_0x41e5c3(0x208)]('shareZlBtn')[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x215087=_0x41e5c3;console[_0x215087(0x243)](_0x215087(0x246));}),document[_0x41e5c3(0x208)](_0x41e5c3(0x209))[_0x41e5c3(0x1fd)](_0x41e5c3(0x24f),()=>{const _0x4014c7=_0x41e5c3,_0x436225=document['getElementById']('imageAi');fetch(_0x436225[_0x4014c7(0x251)])[_0x4014c7(0x272)](_0x4f7314=>_0x4f7314[_0x4014c7(0x213)]())[_0x4014c7(0x272)](_0x3bc707=>{saveAs(_0x3bc707,'Final.jpg'),setTimeout(()=>{const _0x53ac8a=_0x6681;fadeIn(document[_0x53ac8a(0x208)](_0x53ac8a(0x1ed)),0xc8);},0x7d0);})[_0x4014c7(0x1fe)](_0x4f3ef6=>{const _0x25fa7e=_0x4014c7;console[_0x25fa7e(0x1f4)](_0x25fa7e(0x21b),_0x4f3ef6);});}),closeBanner['addEventListener'](_0x41e5c3(0x24f),()=>{const _0x2da8ce=_0x41e5c3;fadeOut(document[_0x2da8ce(0x208)](_0x2da8ce(0x1ed)),0xc8);});function returnHome(){const _0x52ee96=_0x41e5c3;stepHome[_0x52ee96(0x21c)][_0x52ee96(0x259)]='flex',stepTwo[_0x52ee96(0x21c)][_0x52ee96(0x259)]=_0x52ee96(0x25f),stepThree[_0x52ee96(0x21c)][_0x52ee96(0x259)]=_0x52ee96(0x25f),stepFinal[_0x52ee96(0x21c)]['display']=_0x52ee96(0x25f),gdMaleWrapper['style'][_0x52ee96(0x259)]=_0x52ee96(0x25f),gdFemaleWrapper[_0x52ee96(0x21c)][_0x52ee96(0x259)]=_0x52ee96(0x25f),cameraContainer['style'][_0x52ee96(0x259)]=_0x52ee96(0x1f6),controls[_0x52ee96(0x21c)]['display']=_0x52ee96(0x27f),controlsNext[_0x52ee96(0x21c)][_0x52ee96(0x259)]=_0x52ee96(0x25f),canvas[_0x52ee96(0x251)]='',canvas['style']['display']=_0x52ee96(0x25f),document['getElementById'](_0x52ee96(0x25a))[_0x52ee96(0x21c)]['display']=_0x52ee96(0x27f),document[_0x52ee96(0x208)](_0x52ee96(0x1f0))[_0x52ee96(0x21c)][_0x52ee96(0x259)]='none',drawerShare[_0x52ee96(0x264)][_0x52ee96(0x1f3)](_0x52ee96(0x226)),examps['forEach'](_0x631a14=>{const _0x393a41=_0x52ee96;examps[_0x393a41(0x25b)](_0x56cb6c=>_0x56cb6c[_0x393a41(0x264)][_0x393a41(0x1f3)](_0x393a41(0x226)));}),examps[0x0][_0x52ee96(0x264)]['add'](_0x52ee96(0x226)),examps[0x5][_0x52ee96(0x264)][_0x52ee96(0x20c)](_0x52ee96(0x226)),gdFemale[_0x52ee96(0x264)][_0x52ee96(0x1f3)](_0x52ee96(0x24c)),gdMale[_0x52ee96(0x264)][_0x52ee96(0x1f3)]('selected'),gender='';}function fadeOut(_0x56528d,_0x5f08b4){let _0x4d0732=0x1;const _0x1dc9cb=0x32,_0x10a68b=_0x1dc9cb/_0x5f08b4,_0x447303=setInterval(()=>{const _0x2c47e1=_0x6681;_0x4d0732-=_0x10a68b,_0x4d0732<=0x0&&(_0x4d0732=0x0,clearInterval(_0x447303),_0x56528d[_0x2c47e1(0x21c)][_0x2c47e1(0x259)]=_0x2c47e1(0x25f)),_0x56528d[_0x2c47e1(0x21c)][_0x2c47e1(0x274)]=_0x4d0732;},_0x1dc9cb);}function fadeIn(_0x94dce6,_0x12e6ef){const _0x1f03fd=_0x41e5c3;let _0x193777=0x0;const _0x30e588=0x32,_0x2218c9=_0x30e588/_0x12e6ef;_0x94dce6[_0x1f03fd(0x21c)][_0x1f03fd(0x274)]=_0x193777,_0x94dce6[_0x1f03fd(0x21c)]['display']=_0x1f03fd(0x1f6);const _0x503e5d=setInterval(()=>{const _0x145575=_0x1f03fd;_0x193777+=_0x2218c9,_0x193777>=0x1&&(_0x193777=0x1,clearInterval(_0x503e5d)),_0x94dce6[_0x145575(0x21c)][_0x145575(0x274)]=_0x193777;},_0x30e588);}
+const apiUpload =
+  "https://supermanxmirinda.com/app/api/sql/Authorized_Return_Json";
+const apiInit = "https://supermanxmirinda.com/app/api/sql/Public_Return_Json";
+const apiAI = "https://supermanxmirinda.com/app/api/ai/Authorized_Ai_Image";
+
+const examps = document.querySelectorAll(".example-item");
+const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+const captureButton = document.getElementById("capture");
+const countdownDisplay = document.getElementById("countdown");
+const cameraContainer = document.querySelector(".camera-container");
+const flashOverlay = document.getElementById("flash");
+const controls = document.getElementById("controls");
+const controlsNext = document.getElementById("controls-next");
+
+const stepHome = document.getElementById("home");
+const stepRule = document.getElementById("step-rule");
+const stepTwo = document.getElementById("step-two");
+const stepThree = document.getElementById("step-three");
+const stepFinal = document.getElementById("step-final");
+const screenPC = document.querySelector(".screen-pc");
+
+const gdMale = document.getElementById("gender-male");
+const gdFemale = document.getElementById("gender-female");
+const gdMaleWrapper = document.getElementById("gender-wrapper-male");
+const gdFemaleWrapper = document.getElementById("gender-wrapper-female");
+
+const startBtn = document.getElementById("startButton");
+const shareBtn = document.getElementById("shareBtn");
+const drawerShare = document.getElementById("drawerShare");
+const checkbox = document.getElementById("cb5");
+const closeBanner = document.getElementById("closeBannerBtn");
+
+const loading = document.getElementById("overlay-loading");
+const fileInput = document.getElementById("fileInput");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const image = document.getElementById("image");
+const cropBtn = document.getElementById("cropBtn");
+const croppedResult = document.getElementById("croppedResult");
+
+let cropper;
+let globalData = {};
+let finalCanvas;
+
+let gender = "";
+let isChoose;
+
+var bannedWords = {
+  Drug: [
+    "ỉa",
+    "drug",
+    "dope",
+    "drugs",
+    "cigarette",
+    "alcohol",
+    "contraband",
+    "ecstasy",
+    "cigar",
+    "ma túy",
+    "thuốc phiện",
+    "cần sa",
+    "heroin",
+    "meth",
+    "chơi đá",
+    "chơi cỏ",
+    "hít ke",
+    "ma túy đá",
+    "thuốc lắc",
+    "kim tiêm",
+    "tẩu",
+    "bột trắng",
+    "buôn ma túy",
+    "nghiện",
+    "thuốc lá",
+    "xì gà",
+    "cần sa",
+    "thuốc lào",
+    "vape",
+    "shisha",
+    "bia",
+    "cồn",
+    "rượu",
+    "ngộ độc",
+    "say xỉn",
+    "lậu",
+    "hàng cấm",
+    "trái phép",
+    "kích thích",
+    "đánh thuê",
+    "bảo kê",
+    "tống tiền",
+    "mất kiểm soát",
+    "gây gổ",
+    "bạo hành",
+    "phá phách",
+    "sốc thuốc",
+    "mất ý thức",
+    "bắt cóc",
+    "lăng mạ",
+    "phỉ báng",
+    "mắng nhiếc",
+    "chửi rủa",
+    "kích động",
+    "nguyền rủa",
+    "cổ xúy",
+    "bạo lực",
+    "hận thù",
+    "đố kỵ",
+    "đố kị",
+    "mại dâm",
+    "dâm ô",
+    "đĩ",
+    "điếm",
+    "dâm",
+    "cờ bạc",
+    "cá độ",
+    "bài bạc",
+    "chơi bài",
+    "đánh bài",
+    "buôn lậu",
+    "buôn người",
+    "lừa đảo",
+    "tống tiền",
+    "defecated",
+    "defecate",
+    "defecates",
+    "dơ bẩn",
+    "đi tiểu",
+    "đi đại tiện",
+    "phóng uế",
+    "đồi bại",
+    "con cu",
+  ],
+  Violence: [
+    "threatening",
+    "terrorizing",
+    "denouncing crimes",
+    "blood",
+    "die",
+    "kill",
+    "torture",
+    "war",
+    "fight",
+    "bullying",
+    "beating",
+    "suicide",
+    "self - harm",
+    "cursing",
+    "extremism",
+    "death",
+    "đâm",
+    "chém",
+    "đánh",
+    "đập",
+    "đấm",
+    "xô xát",
+    "gây sự",
+    "giết",
+    "hành hung",
+    "bóp cổ",
+    "tạt axit",
+    "chết",
+    "trọng thương",
+    "tử vong",
+    "mất mạng",
+    "thảm sát",
+    "tự tử",
+    "cắt cổ tay",
+    "treo cổ",
+    "nhảy cầu",
+    "đầu độc",
+    "đe dọa",
+    "khủng bố",
+    "uy hiếp",
+    "hăm dọa",
+    "dọa nạt",
+    "giết chóc",
+    "sát hại",
+    "hành quyết",
+    "tàn sát",
+    "diệt chủng",
+    "tử vong",
+    "mất mạng",
+    "thiệt mạng",
+    "hy sinh",
+    "bị thương",
+    "thối rữa",
+    "hủy diệt",
+    "hủy hoại",
+    "tự hại",
+    "nhảy lầu",
+    "chiến tranh",
+    "xung đột",
+    "giao tranh",
+    "thảm sát",
+    "tấn công",
+  ],
+  Weapons: [
+    [
+      "swords",
+      "spears",
+      "bayonets",
+      "daggers",
+      "crossbows",
+      "machetes",
+      "gun",
+      "grenades",
+      "artillery",
+      "bombs",
+      "mines",
+      "enemy",
+      "Army",
+      "boomb",
+      "bom nổ",
+      "tàn sát",
+      "hủy diệt",
+      "xâm chiếm",
+      "thương vong",
+      "mất mát",
+      "đau thương",
+    ],
+  ],
+  Illegal: [
+    "transgress",
+    "robbery",
+    "jealousy",
+    "prostitution",
+    "gambling",
+    "bitch",
+  ],
+  Famous_Brand: [
+    "Dior",
+    "Chanel",
+    "Apple",
+    "Samsung",
+    "Gucci",
+    "Zara",
+    "Prada",
+    "Adidas",
+    "Nike",
+    "Hermes",
+    "Louis",
+    "Vuitton",
+    "Burberry",
+    "Versace",
+    "Céline",
+  ],
+  App: [
+    "Facebook",
+    "Zalo",
+    "Instagram",
+    "Shopee",
+    "Lazada",
+    "Amazon",
+    "Google",
+    "Telegram",
+    "SnapChat",
+  ],
+  BodyandSex: [
+    "sex",
+    "nude",
+    "naked",
+    "body",
+    "dick",
+    "dicks",
+    "cunt",
+    "bitch",
+    "sextoy",
+    "kiss",
+    "fuck",
+    "chest",
+    "sexy",
+    "blowjob",
+    "masturbation",
+    "jerk off",
+    "hand job",
+    "orgasm",
+    "condom",
+    "sperm",
+    "dildo",
+    "buttocks",
+    " ass",
+    "clitoris",
+    "hickey",
+    "semen",
+    "raped",
+    "penis",
+    "cock",
+    "dick",
+    "anus",
+    "boobs",
+    "tits",
+    "pussy",
+    "tounge",
+    "vulva",
+    "vagina",
+    "clitoris",
+    "threesome",
+    "ám ảnh",
+    "trầm cảm",
+    "bế tắc",
+    "tuyệt vọng",
+    "tự hành hạ",
+    "cô lập",
+    "sỉ nhục",
+    "cưỡng hiếp",
+    "xâm hại",
+    "tình dục",
+    "quấy rối",
+    "dương vật",
+    "loz",
+    "lồn",
+    "cac",
+    "cặc",
+    "cc",
+    "ép buộc",
+    "cưỡng bức",
+    "tra tấn",
+    "bao cao su",
+    "mông",
+    "ngực",
+    "vú",
+    "dú",
+    "bú",
+    "liếm",
+    "mút",
+    "cưỡng ép",
+    "lạm dụng",
+    "loli",
+    "shota",
+  ],
+  People: ["kid", "teenager", "hybrid", "crime"],
+  Decry: [
+    "trash",
+    "rubbish",
+    "dirty",
+    "ugly",
+    "silly",
+    "fat",
+    "stupid",
+    "crazy",
+    "disgusting",
+  ],
+  Sanitary: [
+    "bath",
+    "shower",
+    "pee",
+    "poo",
+    "poop",
+    "shit",
+    "toilet",
+    "vomit",
+    "pees",
+  ],
+  Ecology: [
+    "Snake",
+    "ants",
+    "bacteria",
+    "insects",
+    "centipede",
+    "lizards",
+    "insects",
+  ],
+  Scary: [
+    "ghost",
+    "monster",
+    "creepy",
+    "terrifying",
+    "horror",
+    "graveyard",
+    "suicidal",
+    "devil",
+    "zombie",
+    "blood",
+    "máu",
+    "đổ máu",
+    "loang máu",
+    "thấm máu",
+    "vết thương",
+    "sẹo",
+    "trầy xước",
+    "dập nát",
+    "vỡ đầu",
+    "phanh thây",
+    "xác chết",
+    "thi thể",
+    "thối rữa",
+  ],
+  Sensitive: [
+    "religion",
+    "politics",
+    "nation",
+    "nation",
+    "ethnicity",
+    "territory",
+    "money",
+    "maternity",
+    "reactionary",
+    "parties",
+    "communism",
+    "socialism",
+    "god",
+    "buddha",
+    "coffin",
+    "bone",
+  ],
+  Offensive: [
+    "skull",
+    "middle finger",
+    "three stripes",
+    "cross",
+    "thumb down",
+    "cross finger",
+  ],
+  Illness: [
+    "HIV",
+    "Virus",
+    "corona",
+    "hospital",
+    "scabies",
+    "bleeding",
+    "cancer",
+    "chickenpox",
+    "ulcer",
+    "acne",
+    "eczema",
+    "ung thư",
+    "ghẻ",
+    "bệnh",
+    "huyết",
+    "giang mai",
+    "bệnh lậu",
+    "sinh dục",
+    "viêm nhiễm",
+    "nhiễm trùng",
+    "zombie",
+    "xác sống",
+    "qua đời",
+    "chết",
+    "tuyệt vọng",
+    "đau đớn",
+    "tử thần",
+    "đái",
+    "tiểu",
+    "không mặc đồ",
+    "khỏa thân",
+    "nude",
+    "cởi",
+    "truồng",
+    "vệ sinh",
+    "đi ỉa",
+    "đi nặng",
+    "đại tiện",
+    "thô tục",
+    "chất thải",
+    "phân",
+    "cứt",
+    "ỉa",
+    "cặn bã",
+    "xả rác",
+    "thải",
+    "dơ bẩn",
+    "hôi thối",
+    "ô uế",
+    "hôi",
+    "bẩn",
+    "đần",
+    "dốt",
+    "dở",
+    "hiểm nghèo",
+    "thợ săn trẻ em",
+    "thợ săn bé trai",
+    "thợ săn bé gái",
+    "vệ sinh",
+  ],
+};
+
+function isDesktop() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile =
+    /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(
+      userAgent
+    );
+  return !isMobile;
+}
+
+if (isDesktop()) {
+  stepHome.style.display = "none";
+  screenPC.style.display = "block";
+  Swal.fire({
+    title: "Thông báo!",
+    text: "Vui lòng sử dụng điện thoại để quét QR",
+    icon: "info",
+    showConfirmButton: false,
+    didOpen: () => {},
+    // willClose: () => {},
+    customClass: {
+      htmlContainer: "swal-text-large",
+      confirmButton: "swal2-confirm-large",
+    },
+    // allowOutsideClick: false,
+    // allowEscapeKey: false,
+    allowEnterKey: false,
+    showConfirmButton: false,
+    showCloseButton: false,
+  });
+} else {
+}
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+  return null;
+}
+
+function setCookie(name, value) {
+  document.cookie = `${name}=${value}; path=/`;
+}
+
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+}
+
+function getToastStyle() {
+  return window.innerWidth > 2100 && window.innerHeight > 3000
+    ? {
+        fontSize: "6rem",
+        padding: "4rem",
+        maxWidth: "80%",
+        textAlign: "center",
+      }
+    : {
+        fontSize: "1rem",
+        padding: "1rem",
+        maxWidth: "80%",
+        textAlign: "center",
+      };
+}
+
+gdMale.addEventListener("click", () => {
+  gdFemale.classList.remove("selected");
+  gdMale.classList.add("selected");
+  document.querySelector(".gender-male img").src = "./assets/img/male.png";
+  document.querySelector(".gender-female img").src =
+    "./assets/img/femaleDefault.png";
+  gender = "male";
+});
+
+gdFemale.addEventListener("click", () => {
+  gdFemale.classList.add("selected");
+  gdMale.classList.remove("selected");
+  document.querySelector(".gender-male img").src =
+    "./assets/img/maleDefault.png";
+  document.querySelector(".gender-female img").src = "./assets/img/female.png";
+  gender = "female";
+});
+
+checkbox.addEventListener("change", function () {
+  if (this.checked) {
+    if (gender) {
+      stepRule.style.display = "none";
+      stepHome.style.display = "flex";
+      document.querySelector(".overlay-lds-ring").style.display = "flex";
+      setTimeout(() => {
+        stepHome.style.display = "none";
+        stepTwo.style.display = "flex";
+        document.querySelector(".overlay-lds-ring").style.display = "none";
+        setCookie("rule", "true");
+      }, 1000);
+      if (gender === "male") {
+        gdMaleWrapper.style.display = "block";
+        gdFemaleWrapper.style.display = "none";
+        document.getElementById("genderHeader").src =
+          "./assets/img/genderMale.png";
+      } else {
+        gdFemaleWrapper.style.display = "block";
+        gdMaleWrapper.style.display = "none";
+        document.getElementById("genderHeader").src =
+          "./assets/img/genderFemale.png";
+      }
+    } else {
+      Toastify({
+        text: "Bạn chưa chọn giới tính! Vui lòng quay lại!",
+        duration: 1000,
+        close: false,
+        gravity: "top",
+        position: "center",
+        backgroundColor:
+          "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+        style: getToastStyle(),
+      }).showToast();
+      this.checked = false;
+    }
+  }
+});
+
+document.getElementById("ruleBtn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  stepHome.style.display = "none";
+  stepRule.style.display = "flex";
+});
+
+startBtn.addEventListener("click", () => {
+  if (gender) {
+    checkbox.checked = true;
+    stepRule.style.display = "none";
+    stepHome.style.display = "flex";
+    document.querySelector(".overlay-lds-ring").style.display = "flex";
+    setTimeout(() => {
+      stepHome.style.display = "none";
+      stepTwo.style.display = "flex";
+      document.querySelector(".overlay-lds-ring").style.display = "none";
+      setCookie("rule", "true");
+    }, 1000);
+    if (gender === "male") {
+      gdMaleWrapper.style.display = "block";
+      gdFemaleWrapper.style.display = "none";
+      document.getElementById("genderHeader").src =
+        "./assets/img/genderMale.png";
+    } else {
+      gdFemaleWrapper.style.display = "block";
+      gdMaleWrapper.style.display = "none";
+      document.getElementById("genderHeader").src =
+        "./assets/img/genderFemale.png";
+    }
+  } else {
+    Toastify({
+      text: "Bạn chưa chọn giới tính! Vui lòng quay lại!",
+      duration: 1000,
+      close: false,
+      gravity: "top",
+      position: "center",
+      backgroundColor:
+        "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+      style: getToastStyle(),
+    }).showToast();
+    stepRule.style.display = "none";
+    stepHome.style.display = "flex";
+  }
+});
+
+examps.forEach((examp) => {
+  examp.addEventListener("click", () => {
+    examps.forEach((i) => i.classList.remove("active"));
+    examp.classList.add("active");
+  });
+});
+
+document.getElementById("back2Btn").addEventListener("click", () => {
+  stepHome.style.display = "flex";
+  stepTwo.style.display = "none";
+  gdMaleWrapper.style.display = "none";
+  gdFemaleWrapper.style.display = "none";
+  checkbox.checked = false;
+  gdFemale.classList.remove("selected");
+  gdMale.classList.remove("selected");
+  examps.forEach((i) => i.classList.remove("active"));
+});
+
+document.getElementById("back1Btn").addEventListener("click", () => {
+  stepHome.style.display = "flex";
+  stepTwo.style.display = "none";
+  stepRule.style.display = "none";
+  gdMaleWrapper.style.display = "none";
+  gdFemaleWrapper.style.display = "none";
+  checkbox.checked = false;
+});
+
+document.getElementById("nextStepMaleTwo").addEventListener("click", () => {
+  const activeItem = Array.from(examps).find((examp) =>
+    examp.classList.contains("active")
+  );
+  if (!activeItem) {
+    Toastify({
+      text: "Bạn chưa chọn mẫu!",
+      duration: 1000,
+      close: false,
+      gravity: "top",
+      position: "center",
+      backgroundColor:
+        "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+      style: getToastStyle(),
+    }).showToast();
+  } else {
+    isChoose = activeItem.id;
+    stepTwo.style.display = "none";
+    stepThree.style.display = "flex";
+  }
+});
+
+document.getElementById("nextStepFemaleTwo").addEventListener("click", () => {
+  const activeItem = Array.from(examps).find((examp) =>
+    examp.classList.contains("active")
+  );
+  if (!activeItem) {
+    Toastify({
+      text: "Bạn chưa chọn mẫu!",
+      duration: 1000,
+      close: false,
+      gravity: "top",
+      position: "center",
+      backgroundColor:
+        "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+      style: getToastStyle(),
+    }).showToast();
+  } else {
+    isChoose = activeItem.id;
+    stepTwo.style.display = "none";
+    stepThree.style.display = "flex";
+  }
+});
+
+async function startFaceDetection() {
+  const video = document.getElementById("video");
+  const canvas = document.getElementById("frame-overlay");
+  const ctx = canvas.getContext("2d");
+  const waitting = document.querySelector(".wait-camera");
+
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: "user",
+      },
+      audio: false,
+    });
+
+    video.srcObject = stream;
+    video.setAttribute("playsinline", true);
+    video.setAttribute("autoplay", true);
+    video.setAttribute("muted", true);
+    video.setAttribute("disablePictureInPicture", true);
+    video.removeAttribute("controls");
+    video.controls = false;
+
+    waitting.style.display = "none";
+    video.style.opacity = "1";
+
+    video.onloadedmetadata = () => {
+      video.play();
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+    };
+
+    captureButton.disabled = false;
+  } catch (err) {
+    console.error("Không truy cập được webcam:", err);
+  }
+}
+
+startFaceDetection();
+
+captureButton.addEventListener("click", function () {
+  captureButton.disabled = true;
+  let count = 3;
+  countdownDisplay.style.display = "flex";
+  countdownDisplay.textContent = count;
+  captureButton.disabled = true;
+  document.getElementById("back3Btn").style.display = "none";
+
+  const countdownInterval = setInterval(() => {
+    count--;
+    if (count > 0) {
+      countdownDisplay.textContent = count;
+    } else {
+      clearInterval(countdownInterval);
+      countdownDisplay.style.display = "none";
+
+      flashOverlay.classList.add("flash");
+      setTimeout(() => {
+        flashOverlay.classList.remove("flash");
+        const videoWidth = video.videoWidth;
+        const videoHeight = video.videoHeight;
+        const canvasAspect = canvas.width / canvas.height;
+        let cropWidth, cropHeight, sx, sy;
+        if (videoWidth / videoHeight > canvasAspect) {
+          cropHeight = videoHeight;
+          cropWidth = cropHeight * canvasAspect;
+          sx = (videoWidth - cropWidth) / 2;
+          sy = 0;
+        } else {
+          cropWidth = videoWidth;
+          cropHeight = cropWidth / canvasAspect;
+          sx = 0;
+          sy = (videoHeight - cropHeight) / 2;
+        }
+
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.save();
+        context.translate(canvas.width / 2, canvas.height / 2);
+        if (localStorage.getItem("rotate") == "hor") {
+          context.rotate((rotationAngle * Math.PI) / 180);
+        }
+
+        context.drawImage(
+          video,
+          sx,
+          sy,
+          cropWidth,
+          cropHeight,
+          -canvas.width / 2,
+          -canvas.height / 2,
+          canvas.width,
+          canvas.height
+        );
+        context.restore();
+
+        const base64Image = canvas.toDataURL("image/png");
+        capAI = base64Image.replace("data:image/png;base64,", "");
+
+        canvas.src = base64Image;
+        canvas.style.display = "block";
+        cameraContainer.style.display = "none";
+        captureButton.disabled = false;
+        controls.style.display = "none";
+        controlsNext.style.display = "flex";
+        document.getElementById("back3Btn").style.display = "none";
+        document.getElementById("captureAgain").style.display = "block";
+
+        new Promise((resolve, reject) => {
+          const formImg = new FormData();
+          formImg.append("Procedure", "Upload_Avatar");
+          formImg.append("Parameters", capAI);
+          const bearerToken = getCookie("bearer");
+          fetch(apiUpload, {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${bearerToken}`,
+            },
+            body: formImg,
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.text();
+              } else if (response === 401) {
+              } else {
+                throw new Error("Login failed");
+              }
+            })
+            .then((data) => {
+              resolve(data);
+              localStorage.setItem(
+                "img",
+                `https://supermanxmirinda.com/avatars/${
+                  JSON.parse(data).Objects[0].ResponseData
+                }`
+              );
+              document.getElementById("capture-image").style.display = "flex";
+              canvas.src = base64Image;
+              canvas.style.display = "block";
+              cameraContainer.style.display = "none";
+              captureButton.disabled = false;
+              controls.style.display = "none";
+              controlsNext.style.display = "flex";
+              document.getElementById("back3Btn").style.display = "none";
+              document.getElementById("captureAgain").style.display = "block";
+            })
+            .catch((error) => {
+              console.error("Error Create AI:", error);
+              Toastify({
+                text: "Tải ảnh thất bại! Vui lòng chụp lại",
+                duration: 1000,
+                close: false,
+                gravity: "top",
+                position: "center",
+                backgroundColor:
+                  "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+                style: getToastStyle(),
+              }).showToast();
+              document.getElementById("capture-image").style.display = "none";
+              cameraContainer.style.display = "flex";
+              controls.style.display = "block";
+              controlsNext.style.display = "none";
+              canvas.src = "";
+              canvas.style.display = "none";
+              document.getElementById("back3Btn").style.display = "block";
+              document.getElementById("captureAgain").style.display = "none";
+              reject(error);
+            });
+        });
+      }, 500);
+    }
+  }, 1000);
+});
+
+document.getElementById("uploadImg").addEventListener("click", () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener("change", () => {
+  if (fileInput.files && fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const url = URL.createObjectURL(file);
+
+    image.src = url;
+    modal.style.display = "flex";
+
+    if (cropper) {
+      cropper.destroy();
+    }
+
+    image.onload = () => {
+      cropper = new Cropper(image, {
+        aspectRatio: 0.692 / 1,
+        viewMode: 1,
+        autoCropArea: 1,
+        dragMode: "move",
+        cropBoxResizable: true,
+        cropBoxMovable: true,
+        ready() {
+          const cropBoxData = cropper.getCropBoxData();
+          const containerData = cropper.getContainerData();
+
+          const scale = containerData.width / 842;
+          cropper.setCropBoxData({
+            width: 210.5 * scale,
+            height: 304 * scale,
+          });
+        },
+      });
+    };
+  }
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+  if (cropper) {
+    cropper.destroy();
+    cropper = null;
+  }
+  image.src = "";
+  resetFileInput();
+});
+
+cropBtn.addEventListener("click", () => {
+  if (!cropper) return;
+  loading.style.display = "flex";
+  const croppedCanvas = cropper.getCroppedCanvas({
+    width: 842,
+    height: 1216,
+    imageSmoothingEnabled: true,
+    imageSmoothingQuality: "high",
+  });
+
+  const targetCanvas = document.getElementById("canvas");
+  const ctx = targetCanvas.getContext("2d");
+
+  targetCanvas.width = 842;
+  targetCanvas.height = 1216;
+
+  ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+  ctx.drawImage(croppedCanvas, 0, 0, 842, 1216);
+  const base64Crop = targetCanvas.toDataURL("image/png");
+  new Promise((resolve, reject) => {
+    const formImg = new FormData();
+    formImg.append("Procedure", "Upload_Avatar");
+    formImg.append(
+      "Parameters",
+      base64Crop.replace("data:image/png;base64,", "")
+    );
+    const bearerToken = getCookie("bearer");
+    fetch(apiUpload, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${bearerToken}`,
+      },
+      body: formImg,
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        } else if (response === 401) {
+        } else {
+          throw new Error("Login failed");
+        }
+      })
+      .then((data) => {
+        resolve(data);
+        localStorage.setItem(
+          "img",
+          `https://supermanxmirinda.com/avatars/${
+            JSON.parse(data).Objects[0].ResponseData
+          }`
+        );
+        document.getElementById("capture-image").style.display = "flex";
+        canvas.src = base64Crop;
+        canvas.style.transform = "scaleX(1)";
+        canvas.style.display = "block";
+        cameraContainer.style.display = "none";
+        captureButton.disabled = false;
+        controls.style.display = "none";
+        controlsNext.style.display = "flex";
+        document.getElementById("back3Btn").style.display = "none";
+        document.getElementById("captureAgain").style.display = "block";
+        loading.style.display = "none";
+      })
+      .catch((error) => {
+        console.error("Error Create AI:", error);
+        Toastify({
+          text: "Tải ảnh thất bại! Vui lòng chụp lại",
+          duration: 1000,
+          close: false,
+          gravity: "top",
+          position: "center",
+          backgroundColor:
+            "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+          style: getToastStyle(),
+        }).showToast();
+        cameraContainer.style.display = "flex";
+        controls.style.display = "block";
+        controlsNext.style.display = "none";
+        canvas.src = "";
+        canvas.style.display = "none";
+        document.getElementById("back3Btn").style.display = "block";
+        document.getElementById("captureAgain").style.display = "none";
+        reject(error);
+      });
+  });
+  canvas.src = base64Crop;
+  canvas.style.transform = "scaleX(1)";
+  canvas.style.display = "block";
+  cameraContainer.style.display = "none";
+  captureButton.disabled = false;
+  controls.style.display = "none";
+  controlsNext.style.display = "flex";
+  document.getElementById("back3Btn").style.display = "none";
+  document.getElementById("captureAgain").style.display = "block";
+  loading.style.display = "none";
+  modal.style.display = "none";
+  cropper.destroy();
+  cropper = null;
+  image.src = "";
+
+  resetFileInput();
+});
+
+function resetFileInput() {
+  fileInput.value = "";
+}
+
+document.getElementById("captureAgain").addEventListener("click", () => {
+  cameraContainer.style.display = "flex";
+  controls.style.display = "block";
+  controlsNext.style.display = "none";
+  canvas.src = "";
+  canvas.style.display = "none";
+  document.getElementById("back3Btn").style.display = "block";
+  document.getElementById("captureAgain").style.display = "none";
+  canvas.style.transform = "scaleX(-1)";
+  document.getElementById("capture-image").style.display = "none";
+});
+
+document.getElementById("back3Btn").addEventListener("click", () => {
+  stepThree.style.display = "none";
+  stepTwo.style.display = "flex";
+  if (gender === "male") {
+    gdMaleWrapper.style.display = "block";
+    gdFemaleWrapper.style.display = "none";
+  } else if (gender === "female") {
+    gdMaleWrapper.style.display = "none";
+    gdFemaleWrapper.style.display = "block";
+  }
+});
+
+function containsBannedWord(input, bannedWords) {
+  const normalizedInput = input.toLowerCase();
+  for (const category in bannedWords) {
+    const words = Array.isArray(bannedWords[category][0])
+      ? bannedWords[category].flat()
+      : bannedWords[category];
+    for (const word of words) {
+      if (normalizedInput.includes(word.toLowerCase())) {
+        return { found: true, category, word };
+      }
+    }
+  }
+  return { found: false };
+}
+
+const overlay = document.getElementById("drawerOverlay");
+const drawer = document.getElementById("drawerPanel");
+
+document.getElementById("addName").addEventListener("click", () => {
+  overlay.classList.add("active");
+
+  setTimeout(() => {
+    drawer.style.bottom = "0";
+  }, 200);
+});
+
+function closeDrawer() {
+  drawer.style.bottom = "-100%";
+  setTimeout(() => {
+    overlay.classList.remove("active");
+  }, 300);
+}
+
+document.getElementById("createAi").addEventListener("click", () => {
+  const input = document.getElementById("nameInput").value.trim();
+  const resultElement = document.getElementById("result");
+  const charCount = input.length;
+
+  if (!input) {
+    Toastify({
+      text: "Không được để trống tên!",
+      duration: 1000,
+      close: false,
+      gravity: "top",
+      position: "center",
+      backgroundColor:
+        "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+      style: getToastStyle(),
+    }).showToast();
+  } else {
+    if (charCount > 15) {
+      resultElement.innerHTML = `⚠️ Nội dung quá dài. Vui lòng rút gọn lại.`;
+      resultElement.style.color = "orange";
+      resultElement.style.display = "block";
+      return;
+    }
+
+    const result = containsBannedWord(input, bannedWords);
+
+    if (result.found) {
+      resultElement.innerHTML = `🚫 Phát hiện từ cấm "<b>${result.word}</b>"! Vui lòng nhập lại"`;
+      resultElement.style.color = "red";
+    } else {
+      resultElement.innerHTML = "";
+      localStorage.setItem("name", document.getElementById("nameInput").value);
+      closeDrawer();
+      Toastify({
+        text: "Thêm tên thành công!",
+        duration: 1000,
+        close: false,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        style: getToastStyle(),
+      }).showToast();
+      loading.style.display = "flex";
+      document.getElementById("name-wrapper").textContent = String(
+        localStorage.getItem("name")
+      );
+      switch (isChoose) {
+        case "male01":
+          uploadFaceSwap(
+            "https://supermanxmirinda.com/images/ai/face_swap/male01.png"
+          );
+          break;
+        case "male02":
+          uploadFaceSwap(
+            "https://supermanxmirinda.com/images/ai/face_swap/male02.png"
+          );
+          break;
+        case "male03":
+          uploadFaceSwap(
+            "https://supermanxmirinda.com/images/ai/face_swap/male03.png"
+          );
+          break;
+        case "female01":
+          uploadFaceSwap(
+            "https://supermanxmirinda.com/images/ai/face_swap/female01.png"
+          );
+          break;
+        case "female02":
+          uploadFaceSwap(
+            "https://supermanxmirinda.com/images/ai/face_swap/female02.png"
+          );
+          break;
+        case "female03":
+          uploadFaceSwap(
+            "https://supermanxmirinda.com/images/ai/face_swap/female03.png"
+          );
+          break;
+        default:
+          break;
+      }
+    }
+    resultElement.style.display = "block";
+  }
+});
+
+const inputField = document.getElementById("nameInput");
+inputField.addEventListener("input", function () {
+  document.getElementById("result").style.display = "none";
+});
+
+function uploadFaceSwap(ex) {
+  return new Promise((resolve, reject) => {
+    const formUpload = new FormData();
+    formUpload.append("Procedure", "Face_Swap");
+    formUpload.append(
+      "Parameters",
+      JSON.stringify({
+        GamerCode: getCookie("gamer"),
+        SourceImageUrl: localStorage.getItem("img"),
+        TargetImageUrl: ex,
+      })
+    );
+    const bearerToken = getCookie("bearer");
+
+    fetch(apiAI, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${bearerToken}`,
+      },
+      body: formUpload,
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error("Login failed or unauthorized");
+        }
+      })
+      .then((data) => {
+        const responseData = JSON.parse(data).Objects[0].ResponseData;
+
+        if (!responseData) {
+          loading.style.display = "none";
+          Toastify({
+            text: "Tạo ảnh thất bại! Vui lòng thử lại",
+            duration: 1000,
+            close: false,
+            gravity: "top",
+            position: "center",
+            backgroundColor:
+              "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+            style: getToastStyle(),
+          }).showToast();
+          cameraContainer.style.display = "flex";
+          controls.style.display = "block";
+          controlsNext.style.display = "none";
+          canvas.src = "";
+          canvas.style.display = "none";
+          document.getElementById("back3Btn").style.display = "block";
+          document.getElementById("captureAgain").style.display = "none";
+          reject("Empty response");
+        } else {
+          document.getElementById(
+            "imageAi"
+          ).src = `https://supermanxmirinda.com/images-ai/${responseData}`;
+          if (window.innerWidth >= 769) {
+            fitty("#name-wrapper", {
+              minSize: 24,
+              maxSize: 35,
+              multiLine: false,
+            });
+          } else {
+            fitty("#name-wrapper", {
+              minSize: 12,
+              maxSize: 23,
+              multiLine: false,
+            });
+          }
+          setTimeout(() => {
+            const currentFontSize = parseFloat(
+              window.getComputedStyle(document.getElementById("name-wrapper"))
+                .fontSize
+            );
+            if (currentFontSize < 19) {
+                document.querySelector(".name-wrapper").style.top = "90%";
+              } else {
+                document.querySelector(".name-wrapper").style.top = "88%";
+              }
+            screenshot();
+          }, 300);
+
+          loading.style.display = "none";
+          Toastify({
+            text: "Tạo ảnh thành công!",
+            duration: 1000,
+            close: false,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            style: getToastStyle(),
+          }).showToast();
+          stepThree.style.display = "none";
+          stepFinal.style.display = "flex";
+          resolve();
+        }
+      })
+      .catch((error) => {
+        console.error("Error Create AI:", error);
+        loading.style.display = "none";
+        cameraContainer.style.display = "flex";
+        controls.style.display = "block";
+        controlsNext.style.display = "none";
+        canvas.src = "";
+        canvas.style.display = "none";
+        document.getElementById("back3Btn").style.display = "block";
+        document.getElementById("captureAgain").style.display = "none";
+        Toastify({
+          text: "Tạo ảnh thất bại! Vui lòng thử lại",
+          duration: 1000,
+          close: false,
+          gravity: "top",
+          position: "center",
+          backgroundColor:
+            "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+          style: getToastStyle(),
+        }).showToast();
+        reject(error);
+      });
+  });
+}
+
+document.getElementById("shareBtn").addEventListener("click", () => {
+  drawerShare.classList.toggle("active");
+});
+
+document.addEventListener("click", (event) => {
+  const isClickInsideDrawer = drawerShare.contains(event.target);
+  const isClickOnButton = shareBtn.contains(event.target);
+
+  if (!isClickInsideDrawer && !isClickOnButton) {
+    drawerShare.classList.remove("active");
+  }
+});
+
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    closeDrawer();
+  }
+});
+
+document.getElementById("copyBtn").addEventListener("click", () => {
+  const imageUrl = localStorage.getItem("lastImg");
+  navigator.clipboard
+    .writeText(imageUrl)
+    .then(() =>
+      Toastify({
+        text: "Sao chép thành công!",
+        duration: 1000,
+        close: false,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        style: getToastStyle(),
+      }).showToast()
+    )
+    .catch((err) =>
+      Toastify({
+        text: "Sao chép thất bại!",
+        duration: 1000,
+        close: false,
+        gravity: "top",
+        position: "center",
+        backgroundColor:
+          "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+        style: getToastStyle(),
+      }).showToast()
+    );
+  // const imageUrl = localStorage.getItem("lastImg");
+  // navigator.clipboard
+  //   .writeText(imageUrl)
+  //   .then(() =>
+  //     Toastify({
+  //       text: "Sao chép thành công!",
+  //       duration: 1000,
+  //       close: false,
+  //       gravity: "top",
+  //       position: "center",
+  //       backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+  //       style: getToastStyle(),
+  //     }).showToast()
+  //   )
+  //   .catch((err) =>
+  //     Toastify({
+  //       text: "Sao chép thất bại!",
+  //       duration: 1000,
+  //       close: false,
+  //       gravity: "top",
+  //       position: "center",
+  //       backgroundColor:
+  //         "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+  //       style: getToastStyle(),
+  //     }).showToast()
+  //   );
+});
+
+document.getElementById("shareFbBtn").addEventListener("click", () => {
+  const sharedUrl = localStorage.getItem("lastImg");
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+    sharedUrl
+  )}`;
+  window.open(facebookShareUrl, "_blank");
+  navigator.clipboard
+    .writeText(sharedUrl)
+    .then(() =>
+      Toastify({
+        text: "Chia sẻ ảnh thành công!",
+        duration: 3000,
+        close: false,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        style: getToastStyle(),
+      }).showToast()
+    )
+    .catch((err) =>
+      Toastify({
+        text: "Chia sẻ ảnh thất bại!",
+        duration: 1000,
+        close: false,
+        gravity: "top",
+        position: "center",
+        backgroundColor:
+          "linear-gradient(to right,rgb(255, 40, 40),rgb(255, 74, 74))",
+        style: getToastStyle(),
+      }).showToast()
+    );
+});
+
+document.getElementById("shareZlBtn").addEventListener("click", () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Trang chia sẻ",
+        text: "Hãy xem thử nội dung này nhé!",
+        url: localStorage.getItem("lastImg"),
+      })
+      .then(() => console.log("Chia sẻ thành công"))
+      .catch((error) => console.log("Lỗi chia sẻ:", error));
+  } else {
+    alert("Trình duyệt không hỗ trợ chia sẻ trực tiếp.");
+  }
+});
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  const widthScreen = window.screen.width * window.devicePixelRatio;
+  const heightScreen = window.screen.height * window.devicePixelRatio;
+  const img = document.getElementById("imageAi");
+
+  if (widthScreen >= 2000 && heightScreen >= 3000) {
+    console.log("large");
+  } else {
+    fetch(localStorage.getItem("lastImg"))
+      .then((res) => res.blob())
+      .then((blob) => {
+        saveAs(blob, "Final.jpg");
+        setTimeout(() => {
+          fadeIn(document.getElementById("overlay-banner"), 200);
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error("Lỗi khi tải ảnh:", err);
+      });
+  }
+});
+
+closeBanner.addEventListener("click", () => {
+  fadeOut(document.getElementById("overlay-banner"), 200);
+});
+
+function returnHome() {
+  stepHome.style.display = "flex";
+  stepTwo.style.display = "none";
+  stepThree.style.display = "none";
+  stepFinal.style.display = "none";
+  gdMaleWrapper.style.display = "none";
+  gdFemaleWrapper.style.display = "none";
+  cameraContainer.style.display = "flex";
+  controls.style.display = "block";
+  controlsNext.style.display = "none";
+  canvas.src = "";
+  canvas.style.display = "none";
+  document.getElementById("back3Btn").style.display = "block";
+  document.getElementById("captureAgain").style.display = "none";
+  drawerShare.classList.remove("active");
+  examps.forEach((examp) => {
+    examps.forEach((i) => i.classList.remove("active"));
+  });
+  gdFemale.classList.remove("selected");
+  gdMale.classList.remove("selected");
+  document.querySelector(".gender-male img").src =
+    "./assets/img/maleDefault.png";
+  document.querySelector(".gender-female img").src =
+    "./assets/img/femaleDefault.png";
+  gender = "";
+  checkbox.checked = false;
+  document.getElementById("nameInput").value = "";
+}
+
+function screenshot() {
+  const node = document.getElementById("image-final");
+
+  const nameWrapper = document.querySelector("#name-wrapper span");
+  document.querySelector(".name-wrapper").style.overflow = "visible";
+
+  if (nameWrapper) {
+    const scale = parseFloat(
+      getComputedStyle(nameWrapper)
+        .transform.split(",")[0]
+        .replace("matrix(", "")
+    );
+    const fontSize = parseFloat(getComputedStyle(nameWrapper).fontSize);
+    const actualFontSize = fontSize * scale;
+
+    const parent = nameWrapper.parentElement;
+    parent.style.fontSize = actualFontSize + "px";
+    parent.textContent = nameWrapper.textContent;
+  }
+
+  const img = document.querySelector(".image-final img");
+  const originalBorder = img.style.border;
+  img.style.border = "none";
+
+  html2canvas(node, {
+    scale: 3,
+    useCORS: true,
+    logging: false,
+  })
+    .then((canvasOriginal) => {
+      img.style.border = originalBorder;
+
+      const resizedCanvas = document.createElement("canvas");
+      resizedCanvas.width = 1000;
+      resizedCanvas.height = 1200;
+
+      const ctx = resizedCanvas.getContext("2d");
+      ctx.drawImage(
+        canvasOriginal,
+        0,
+        0,
+        canvasOriginal.width,
+        canvasOriginal.height,
+        0,
+        0,
+        resizedCanvas.width,
+        resizedCanvas.height
+      );
+
+      let base64 = resizedCanvas.toDataURL("image/jpeg", 0.85);
+      new Promise((resolve, reject) => {
+        const formImg = new FormData();
+        formImg.append("Procedure", "Upload_Avatar");
+        formImg.append(
+          "Parameters",
+          base64.replace("data:image/jpeg;base64,", "")
+        );
+        const bearerToken = getCookie("bearer");
+        fetch(apiUpload, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${bearerToken}`,
+          },
+          body: formImg,
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.text();
+            } else if (response === 401) {
+            }
+          })
+          .then((data) => {
+            resolve(data);
+            localStorage.setItem(
+              "lastImg",
+              `https://supermanxmirinda.com/avatars/${
+                JSON.parse(data).Objects[0].ResponseData
+              }`
+            );
+          })
+          .catch((error) => {
+            console.error("Error Create AI:", error);
+            reject(error);
+          });
+      });
+
+      finalCanvas = resizedCanvas;
+    })
+    .catch((err) => {
+      console.error("Lỗi:", err);
+    });
+}
+
+function fadeOut(element, duration) {
+  let opacity = 1;
+  const interval = 50;
+  const gap = interval / duration;
+
+  const fading = setInterval(() => {
+    opacity -= gap;
+    if (opacity <= 0) {
+      opacity = 0;
+      clearInterval(fading);
+      element.style.display = "none";
+    }
+    element.style.opacity = opacity;
+  }, interval);
+}
+
+function fadeIn(element, duration) {
+  let opacity = 0;
+  const interval = 50;
+  const gap = interval / duration;
+
+  element.style.opacity = opacity;
+  element.style.display = "flex";
+
+  const fading = setInterval(() => {
+    opacity += gap;
+    if (opacity >= 1) {
+      opacity = 1;
+      clearInterval(fading);
+    }
+    element.style.opacity = opacity;
+  }, interval);
+}

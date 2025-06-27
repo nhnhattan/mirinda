@@ -1,0 +1,453 @@
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* Home */
+  .logo-header img {
+    width: 20%;
+  }
+
+  .header-content div:last-child img {
+    width: 80%;
+  }
+
+  .home-footer div:first-child {
+    width: 115%;
+    left: 50%;
+    bottom: -52%;
+  }
+
+  .home-footer div:last-child {
+    width: 40%;
+  }
+
+  .home-text {
+    font-size: 1.25rem;
+  }
+
+  .step-content img {
+    width: 80%;
+  }
+
+  .gender-wrapper div {
+    width: 45%;
+  }
+
+  .checkbox-wrapper-10 .tgl + .tgl-btn {
+    width: 5.75em;
+    height: 2.5em;
+  }
+
+  .checkbox-wrapper-10 span {
+    font-size: 1.25em;
+  }
+
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:before,
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+    font-size: 1.3em;
+  }
+
+  .logo-home .logo-left,
+  .logo-home .logo-right {
+    width: 15%;
+  }
+
+  /* StepTwo */
+  .footer-logo div {
+    width: 15%;
+  }
+
+  .footer-logo div:nth-child(2) img {
+    width: 45%;
+  }
+
+  .step-two .step-content {
+    width: 25%;
+  }
+
+  .gender-header div {
+    width: 75%;
+  }
+
+  .gender-container .example-item {
+    max-width: 30%;
+  }
+
+  .footer-logo {
+    width: 80%;
+  }
+
+  /* StepThree */
+  .camera-content div:nth-child(1) {
+    width: 25%;
+  }
+
+  .camera-content div:nth-child(2) {
+    width: 60%;
+    margin-bottom: 0.5rem;
+  }
+
+  .camera-content {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    width: 70%;
+  }
+
+  .camera-container {
+    width: 75%;
+  }
+
+  #controls button {
+    width: 30%;
+  }
+
+  #controls-next button {
+    width: 40%;
+  }
+
+  .capture-image {
+    width: 40%;
+  }
+
+  .name-drawer {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 3rem;
+  }
+
+  .name-drawer input {
+    padding: 1.75rem 2rem;
+    font-size: 1.25rem;
+    margin: 3rem;
+  }
+
+  /* StepFinal */
+  .step-final .step-content div:first-child {
+    width: 25%;
+  }
+
+  .step-final .step-content div:last-child {
+    width: 80%;
+  }
+
+  .image-final {
+    width: 60%;
+  }
+
+  .step-final .final-button button {
+    width: 35%;
+  }
+
+  /* Another */
+  .overlay-banner .banner-container {
+    width: 545px;
+    height: 872px;
+    margin-bottom: 7rem;
+  }
+
+  .drawer-container {
+    gap: 3rem;
+    height: 20vh;
+  }
+
+  .drawer-container div {
+    width: 18%;
+  }
+
+  .lds-ring div,
+  .lds-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  #loading-text {
+    font-size: 3.6rem;
+  }
+
+  .overlay p {
+    font-size: 1.25rem;
+  }
+
+  .overlay .loader-gif {
+    width: 30%;
+    margin-bottom: 3rem;
+  }
+
+  .name-wrapper {
+    top: 91%;
+    left: 43.5%;
+    width: 60%;
+    max-width: 60%;
+    position: absolute;
+    height: 5%;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Home */
+  .logo-header img {
+    width: 20%;
+  }
+
+  .header-content div:last-child img {
+    width: 80%;
+  }
+
+  .home-footer div:first-child {
+    width: 115%;
+    left: 50%;
+    bottom: -52%;
+  }
+
+  .home-footer div:last-child {
+    width: 40%;
+  }
+
+  .home-text {
+    font-size: 1.25rem;
+  }
+
+  .step-content img {
+    width: 80%;
+  }
+
+  .gender-wrapper div {
+    width: 45%;
+  }
+
+  .checkbox-wrapper-10 .tgl + .tgl-btn {
+    width: 5.75em;
+    height: 2.5em;
+  }
+
+  .checkbox-wrapper-10 span {
+    font-size: 1.25em;
+  }
+
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:before,
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+    font-size: 1.3em;
+  }
+
+  .logo-home .logo-left,
+  .logo-home .logo-right {
+    width: 15%;
+  }
+
+  /* StepTwo */
+  .footer-logo div {
+    width: 15%;
+  }
+
+  .footer-logo div:nth-child(2) img {
+    width: 45%;
+  }
+
+  .step-two .step-content {
+    width: 25%;
+  }
+
+  .gender-header div {
+    width: 75%;
+  }
+
+  .gender-container .example-item {
+    max-width: 30%;
+  }
+
+  .footer-logo {
+    width: 80%;
+  }
+
+  /* StepThree */
+  .camera-content div:nth-child(1) {
+    width: 25%;
+  }
+
+  .camera-content div:nth-child(2) {
+    width: 60%;
+    margin-bottom: 0.5rem;
+  }
+
+  .camera-content {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    width: 70%;
+  }
+
+  .camera-container {
+    width: 75%;
+  }
+
+  #controls button {
+    width: 30%;
+  }
+
+  #controls-next button {
+    width: 40%;
+  }
+
+  .capture-image {
+    width: 40%;
+  }
+
+  .name-drawer {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 3rem;
+  }
+
+  .name-drawer input {
+    padding: 1.75rem 2rem;
+    font-size: 1.25rem;
+    margin: 3rem;
+  }
+
+  /* StepFinal */
+  .step-final .step-content div:first-child {
+    width: 25%;
+  }
+
+  .step-final .step-content div:last-child {
+    width: 80%;
+  }
+
+  .image-final {
+    width: 60%;
+  }
+
+  .step-final .final-button button {
+    width: 35%;
+  }
+
+  /* Another */
+  .overlay-banner .banner-container {
+    width: 545px;
+    height: 872px;
+    margin-bottom: 7rem;
+  }
+
+  .drawer-container {
+    gap: 3rem;
+    height: 20vh;
+  }
+
+  .drawer-container div {
+    width: 18%;
+  }
+
+  .lds-ring div,
+  .lds-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  #loading-text {
+    font-size: 3.6rem;
+  }
+
+  .overlay p {
+    font-size: 1.25rem;
+  }
+
+  .overlay .loader-gif {
+    width: 30%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (min-device-height: 800px) {
+  .home-footer div:first-child {
+    width: 120%;
+    bottom: -25%;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}

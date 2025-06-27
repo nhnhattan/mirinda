@@ -1,6 +1,6 @@
-const apiRef = "https://game.advietnam.vn/app/api/sql/Public_Return_Json";
-const apiLogin = "https://game.advietnam.vn/app/api/Token/TokenCustomer";
-const apiDetail = "https://game.advietnam.vn/app/api/sql/Customer_Return_Json";
+const apiRef = "https://supermanxmirinda.com/app/api/sql/Public_Return_Json";
+const apiLogin = "https://supermanxmirinda.com/app/api/Token/TokenCustomer";
+const apiDetail = "https://supermanxmirinda.com/app/api/sql/Customer_Return_Json";
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
